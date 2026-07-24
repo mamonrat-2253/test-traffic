@@ -1,0 +1,2290 @@
+
+<!DOCTYPE html>
+<html lang="th" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สถาบันพระมหากษัตริย์ในสังคมไทย</title>
+    
+    <!-- Tailwind CSS for modern responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Charmonman & Charm (Traditional Thai script matching IMG_20260712_072854.jpg) and Sarabun (Formal body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@400;700&family=Charmonman:wght@400;700&family=Sarabun:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for clean, sharp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        royalGold: '#C5A059',       // Elegant traditional Thai gold
+                        royalGoldDark: '#9A7B3E',   // Deep bronze gold accent
+                        royalGoldLight: '#F3EAD3',  // Pale gold ivory
+                        thaiYellow: '#FCD116',      // State golden yellow
+                        thaiWhite: '#FFFFFF',       // Clean white
+                        thaiCream: '#FCFBF7',       // Sovereign parchment cream
+                        thaiBlack: '#111111',       // High-contrast rich black for formal text
+                        thaiMuted: '#555555',       // Charcoal for subtle notes
+                    },
+                    fontFamily: {
+                        traditional: ['Charmonman', 'Charm', 'serif'],
+                        formal: ['Sarabun', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            font-family: 'Sarabun', 'sans-serif';
+            background: linear-gradient(135deg, #F3EAD3 0%, #FCFBF7 100%);
+            color: #111111;
+            overscroll-behavior: contain;
+        }
+        
+        .font-traditional {
+            font-family: 'Charmonman', 'Charm', serif;
+        }
+        
+        /* Custom scrollbar matching formal gold theme */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 5px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #FCFBF7;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #C5A059;
+            border-radius: 9999px;
+        }
+        
+        /* Slow elegant shaking animation for the grievance bell */
+        @keyframes formal-bell {
+            0%, 100% { transform: rotate(0); }
+            10% { transform: rotate(8deg); }
+            20% { transform: rotate(-7deg); }
+            30% { transform: rotate(6deg); }
+            40% { transform: rotate(-5deg); }
+            50% { transform: rotate(4deg); }
+            60% { transform: rotate(-3deg); }
+            70% { transform: rotate(2deg); }
+            80% { transform: rotate(-1deg); }
+        }
+        .animate-formal-bell {
+            animation: formal-bell 1.5s ease-in-out infinite;
+            transform-origin: top center;
+        }
+
+        /* Sovereign Royal Thai Flag Ribbon decoration */
+        .flag-accent-bar {
+            height: 4px;
+            background: linear-gradient(to right, 
+                #A22226 0%, #A22226 18%, 
+                #F4F5F8 18%, #F4F5F8 36%, 
+                #1B2244 36%, #1B2244 64%, 
+                #F4F5F8 64%, #F4F5F8 82%, 
+                #A22226 82%, #A22226 100%
+            );
+        }
+        
+        /* Golden Filigree Border Decoration */
+        .royal-border {
+            position: relative;
+            border: 1px solid rgba(197, 160, 89, 0.4);
+        }
+        .royal-border::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            border: 1px solid rgba(197, 160, 89, 0.2);
+            pointer-events: none;
+            border-radius: inherit;
+        }
+    </style>
+</head>
+<body class="h-full flex items-center justify-center p-0 sm:p-4 overflow-hidden">
+
+    <!-- iPhone / Smartphone Frame Container on Desktop -->
+    <div class="w-full max-w-md h-full sm:h-[840px] bg-[#FCFBF7] text-thaiBlack flex flex-col relative sm:rounded-[40px] sm:border-[10px] sm:border-[#C5A059] shadow-2xl overflow-hidden transition-all duration-300">
+        
+        <!-- Smartphone Top Bezel / Notch (Visible on Large Screens) -->
+        <div class="hidden sm:flex justify-between items-center px-6 pt-3 pb-2 bg-thaiCream text-xs text-royalGoldDark select-none z-50 border-b border-royalGold/20">
+            <span id="statusBarTime" class="font-bold">09:41</span>
+            <div class="w-16 h-4 bg-royalGoldDark/20 rounded-full absolute left-1/2 transform -translate-x-1/2 top-2"></div>
+            <div class="flex items-center space-x-1.5 font-bold">
+                <i class="fa-solid fa-signal"></i>
+                <span class="text-[10px]">5G</span>
+                <i class="fa-solid fa-battery-three-quarters"></i>
+            </div>
+        </div>
+
+        <!-- Locked Single-Line Title Frame -->
+        <header class="bg-thaiCream px-4 py-4 border-b-2 border-royalGold/30 relative select-none shadow-sm">
+            <div class="flag-accent-bar absolute top-0 left-0 right-0"></div>
+            <div class="flex justify-between items-center mt-1">
+                <!-- Single-Line Dynamic Title forced to not wrap, with elegant traditional styling -->
+                <h1 class="text-xl font-bold font-traditional text-thaiBlack truncate whitespace-nowrap overflow-hidden mr-2">
+                    🇹🇭 สถาบันพระมหากษัตริย์ในสังคมไทย
+                </h1>
+                <div class="flex items-center space-x-2 flex-shrink-0">
+                    <div class="flex items-center bg-white px-2.5 py-1 rounded-full border border-royalGold shadow-sm">
+                        <i class="fa-solid fa-star text-royalGold mr-1 text-xs"></i>
+                        <span id="starCounter" class="text-xs font-bold text-thaiBlack">0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- All chapters, games, quizzes, and badges live inside this scrolling element -->
+        <main class="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 custom-scrollbar relative bg-[#FAF8F2]" id="appMain">
+            
+            <!-- SECTION 1: LEARNING DASHBOARD (Default view) -->
+            <div id="viewLearn" class="space-y-4 transition-all duration-300">
+                
+                <!-- Elegant Banner: English citation with pristine Thai translation (Removed "คัมภีรภาพ") -->
+                <div class="bg-white p-5 rounded-2xl royal-border relative overflow-hidden group shadow-md">
+                    <!-- Flag decoration inside banner -->
+                    <div class="absolute top-0 left-0 right-0 h-1 flag-accent-bar"></div>
+                    <div class="absolute -right-6 -bottom-6 text-royalGold/10 text-8xl pointer-events-none group-hover:scale-110 transition-transform duration-500">
+                        <i class="fa-solid fa-crown"></i>
+                    </div>
+                    <div class="space-y-3 mt-1">
+                        <p class="text-xs text-royalGoldDark uppercase tracking-widest font-bold font-traditional">Historical Significance</p>
+                        <p class="text-[12px] leading-relaxed text-neutral-700 italic font-medium">
+                            "Thailand has never been colonized by Western powers owing to the royal grace and foreign policy of the monarchy."
+                        </p>
+                        <p class="text-[15px] leading-relaxed text-thaiBlack font-traditional pt-2 border-t border-dashed border-royalGold/20">
+                            ประเทศไทยสามารถรักษาเอกราชและอธิปไตยให้รอดพ้นจากการตกเป็นอาณานิคมของชาติตะวันตกได้จนถึงปัจจุบัน เนื่องด้วยพระบารมีและการดำเนินวิเทศนโยบายอันสุขุมของสถาบันพระมหากษัตริย์
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tricolor Accent Progress Indicator -->
+                <div class="flex items-center justify-between px-1 mt-2">
+                    <span class="text-xs text-neutral-600 font-bold font-traditional">ความคืบหน้าการศึกษาหลักสูตร</span>
+                    <span class="text-xs text-thaiBlack font-bold font-traditional" id="studyProgressPercentage">0% สำเร็จ</span>
+                </div>
+                <div class="w-full bg-white border border-royalGold/40 h-3.5 rounded-full overflow-hidden p-0.5 shadow-inner">
+                    <div id="studyProgressBar" class="h-full bg-thaiYellow rounded-full transition-all duration-500 border-r border-royalGold" style="width: 0%"></div>
+                </div>
+
+                <!-- Infographic Cards for each core lesson -->
+                <div class="grid grid-cols-1 gap-3.5 pt-1" id="chaptersGrid">
+                    
+                    <!-- Chapter 1 -->
+                    <div onclick="openChapter(1)" class="bg-white hover:bg-royalGoldLight/20 border border-royalGold/30 p-4 rounded-xl cursor-pointer transition-all duration-300 hover:border-royalGold shadow-sm hover:shadow-md relative overflow-hidden group">
+                        <div class="flag-accent-bar absolute left-0 top-0 bottom-0 w-[4px] h-full"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="space-y-1">
+                                <span class="text-[10px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2 py-0.5 rounded-md font-bold font-traditional">บทที่ ๑</span>
+                                <h3 class="font-bold text-thaiBlack group-hover:text-royalGoldDark transition-colors font-traditional text-lg">ความหมายและคำนิยาม</h3>
+                                <p class="text-xs text-neutral-600 font-formal">นิยามของกษัตริย์, พระราชา, ธรรมราชา, และพระเจ้าแผ่นดิน</p>
+                            </div>
+                            <span class="text-royalGoldDark bg-royalGoldLight/40 border border-royalGold/30 p-2 rounded-lg text-xs transition-transform duration-300 group-hover:translate-x-1" id="badgeCh1">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 2 -->
+                    <div onclick="openChapter(2)" class="bg-white hover:bg-royalGoldLight/20 border border-royalGold/30 p-4 rounded-xl cursor-pointer transition-all duration-300 hover:border-royalGold shadow-sm hover:shadow-md relative overflow-hidden group">
+                        <div class="flag-accent-bar absolute left-0 top-0 bottom-0 w-[4px] h-full"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="space-y-1">
+                                <span class="text-[10px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2 py-0.5 rounded-md font-bold font-traditional">บทที่ ๒</span>
+                                <h3 class="font-bold text-thaiBlack group-hover:text-royalGoldDark transition-colors font-traditional text-lg">ความสำคัญในสังคมไทย</h3>
+                                <p class="text-xs text-neutral-600 font-formal">แกนกลางความมั่นคง และนัยยะสีน้ำเงินบนธงไตรรงค์</p>
+                            </div>
+                            <span class="text-royalGoldDark bg-royalGoldLight/40 border border-royalGold/30 p-2 rounded-lg text-xs transition-transform duration-300 group-hover:translate-x-1" id="badgeCh2">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 3 -->
+                    <div onclick="openChapter(3)" class="bg-white hover:bg-royalGoldLight/20 border border-royalGold/30 p-4 rounded-xl cursor-pointer transition-all duration-300 hover:border-royalGold shadow-sm hover:shadow-md relative overflow-hidden group">
+                        <div class="flag-accent-bar absolute left-0 top-0 bottom-0 w-[4px] h-full"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="space-y-1">
+                                <span class="text-[10px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2 py-0.5 rounded-md font-bold font-traditional">บทที่ ๓</span>
+                                <h3 class="font-bold text-thaiBlack group-hover:text-royalGoldDark transition-colors font-traditional text-lg">สถานะและระบบความสัมพันธ์</h3>
+                                <p class="text-xs text-neutral-600 font-formal">บิดาปกครองบุตร, กษัตริย์ธรรมราชา, และเทวราช</p>
+                            </div>
+                            <span class="text-royalGoldDark bg-royalGoldLight/40 border border-royalGold/30 p-2 rounded-lg text-xs transition-transform duration-300 group-hover:translate-x-1" id="badgeCh3">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 4 -->
+                    <div onclick="openChapter(4)" class="bg-white hover:bg-royalGoldLight/20 border border-royalGold/30 p-4 rounded-xl cursor-pointer transition-all duration-300 hover:border-royalGold shadow-sm hover:shadow-md relative overflow-hidden group">
+                        <div class="flag-accent-bar absolute left-0 top-0 bottom-0 w-[4px] h-full"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="space-y-1">
+                                <span class="text-[10px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2 py-0.5 rounded-md font-bold font-traditional">บทที่ ๔</span>
+                                <h3 class="font-bold text-thaiBlack group-hover:text-royalGoldDark transition-colors font-traditional text-lg">คุณูปการ 9 ประการ</h3>
+                                <p class="text-xs text-neutral-600 font-formal">บทบาทการยุติวิกฤตชาติ, ทรงพัฒนาเพื่อแผ่นดิน</p>
+                            </div>
+                            <span class="text-royalGoldDark bg-royalGoldLight/40 border border-royalGold/30 p-2 rounded-lg text-xs transition-transform duration-300 group-hover:translate-x-1" id="badgeCh4">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 5 -->
+                    <div onclick="openChapter(5)" class="bg-white hover:bg-royalGoldLight/20 border border-royalGold/30 p-4 rounded-xl cursor-pointer transition-all duration-300 hover:border-royalGold shadow-sm hover:shadow-md relative overflow-hidden group">
+                        <div class="flag-accent-bar absolute left-0 top-0 bottom-0 w-[4px] h-full"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="space-y-1">
+                                <span class="text-[10px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2 py-0.5 rounded-md font-bold font-traditional">บทที่ ๕</span>
+                                <h3 class="font-bold text-thaiBlack group-hover:text-royalGoldDark transition-colors font-traditional text-lg">สิทธิอำนาจตามประชาธิปไตย</h3>
+                                <p class="text-xs text-neutral-600 font-formal">สิทธิที่บัญญัติและไม่ได้บัญญัติไว้ในรัฐธรรมนูญ</p>
+                            </div>
+                            <span class="text-royalGoldDark bg-royalGoldLight/40 border border-royalGold/30 p-2 rounded-lg text-xs transition-transform duration-300 group-hover:translate-x-1" id="badgeCh5">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Chapter 6 -->
+                    <div onclick="openChapter(6)" class="bg-white hover:bg-royalGoldLight/20 border border-royalGold/30 p-4 rounded-xl cursor-pointer transition-all duration-300 hover:border-royalGold shadow-sm hover:shadow-md relative overflow-hidden group">
+                        <div class="flag-accent-bar absolute left-0 top-0 bottom-0 w-[4px] h-full"></div>
+                        <div class="flex justify-between items-start pl-2">
+                            <div class="space-y-1">
+                                <span class="text-[10px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2 py-0.5 rounded-md font-bold font-traditional">บทที่ ๖</span>
+                                <h3 class="font-bold text-thaiBlack group-hover:text-royalGoldDark transition-colors font-traditional text-lg">พระราชกรณียกิจหลัก</h3>
+                                <p class="text-xs text-neutral-600 font-formal">พระราชพิธี, งานสังคมสงเคราะห์, และการพัฒนา</p>
+                            </div>
+                            <span class="text-royalGoldDark bg-royalGoldLight/40 border border-royalGold/30 p-2 rounded-lg text-xs transition-transform duration-300 group-hover:translate-x-1" id="badgeCh6">
+                                <i class="fa-regular fa-circle-play"></i>
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SECTION 2: CHAPTER VIEWER (Dynamically Populated) -->
+            <div id="viewChapterDetail" class="hidden space-y-4 pb-12 transition-all duration-300">
+                <button onclick="backToDashboard()" class="flex items-center space-x-2 text-sm text-royalGoldDark hover:text-[#111111] font-bold select-none font-traditional">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>กลับหน้าหลักบทเรียน</span>
+                </button>
+                
+                <div id="chapterContentArea" class="space-y-4">
+                    <!-- Dynamic infographic lesson slide injection goes here -->
+                </div>
+            </div>
+
+            <!-- SECTION 3: THE BELL GAME ("คุณคือพ่อขุน" Gamification) -->
+            <div id="viewGame" class="hidden space-y-5 transition-all duration-300">
+                <div class="text-center space-y-2 select-none">
+                    <span class="text-[11px] bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-3 py-1 rounded-full font-bold font-traditional">มินิเกมจำลองประวัติศาสตร์</span>
+                    <h2 class="text-2xl font-bold font-traditional text-thaiBlack">คุณคือผู้รับเรื่องร้องทุกข์</h2>
+                    <p class="text-xs text-neutral-600 leading-relaxed max-w-sm mx-auto font-formal">
+                        สั่นกระดิ่งร้องทุกข์ (จำลองราชประเพณี "บิดาปกครองบุตร" สมัยสุโขทัย) เพื่อรับฟังเรื่องเดือดร้อนของราษฎร และเลือกวิธีคลี่คลายปัญหาอย่างเหมาะสมตามรอยศาสตร์พระราชา
+                    </p>
+                </div>
+
+                <!-- Custom Mode Switch: Traditional vs AI Dynamic Generation -->
+                <div class="grid grid-cols-2 gap-2 bg-white p-1 rounded-xl border border-royalGold/30 shadow-sm">
+                    <button id="gameModeClassic" onclick="setGameMode('classic')" class="py-1.5 px-3 rounded-lg text-xs font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all">
+                        แบบดั้งเดิม (คลาสสิก)
+                    </button>
+                    <button id="gameModeAI" onclick="setGameMode('ai')" class="py-1.5 px-3 rounded-lg text-xs font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all">
+                        <i class="fa-solid fa-wand-magic-sparkles text-royalGold mr-1"></i>จำลองด้วย AI
+                    </button>
+                </div>
+
+                <!-- AI Mode Selector (Visible only when AI mode is active) -->
+                <div id="aiModeConfig" class="bg-white p-3.5 rounded-2xl royal-border space-y-3 hidden shadow-sm">
+                    <label class="block text-xs text-neutral-600 font-bold font-traditional">เลือกประเด็นความทุกข์ร้อนของพสกนิกร:</label>
+                    <div class="grid grid-cols-2 gap-2 text-xs">
+                        <button onclick="setAiCategory('water')" id="aiCat-water" class="py-2 px-3 rounded-xl border border-royalGold text-thaiBlack font-bold bg-royalGoldLight font-traditional">การจัดการน้ำ</button>
+                        <button onclick="setAiCategory('soil')" id="aiCat-soil" class="py-2 px-3 rounded-xl border border-neutral-200 text-neutral-600 font-traditional hover:border-royalGold">สภาพผืนดิน</button>
+                        <button onclick="setAiCategory('forest')" id="aiCat-forest" class="py-2 px-3 rounded-xl border border-neutral-200 text-neutral-600 font-traditional hover:border-royalGold">ผืนป่าต้นน้ำ</button>
+                        <button onclick="setAiCategory('livelihood')" id="aiCat-livelihood" class="py-2 px-3 rounded-xl border border-neutral-200 text-neutral-600 font-traditional hover:border-royalGold">ชีวิตความเป็นอยู่</button>
+                    </div>
+                </div>
+
+                <!-- Animated Grievance Bell with elegant filigree frame -->
+                <div class="flex flex-col items-center justify-center py-8 bg-white rounded-3xl royal-border shadow-md relative overflow-hidden">
+                    <div class="absolute top-0 left-0 right-0 h-1 flag-accent-bar"></div>
+                    <div id="bellGraphic" onclick="ringTheBell()" class="cursor-pointer text-royalGold text-7xl transform hover:scale-110 active:scale-95 transition-all duration-150">
+                        <i class="fa-solid fa-bell drop-shadow-[0_4px_6px_rgba(0,0,0,0.1)] hover:animate-formal-bell"></i>
+                    </div>
+                    <span id="bellStatusText" class="text-xs text-royalGoldDark font-bold font-traditional uppercase tracking-widest mt-4 animate-pulse">🔔 กดที่กระดิ่งเพื่อสั่นร้องทุกข์</span>
+                </div>
+
+                <!-- AI Loading Indicator -->
+                <div id="aiGameLoading" class="bg-white royal-border rounded-2xl p-6 text-center space-y-3 hidden shadow-sm">
+                    <div class="flex justify-center items-center space-x-2">
+                        <div class="w-3.5 h-3.5 bg-royalGold border border-royalGoldDark rounded-full animate-bounce"></div>
+                        <div class="w-3.5 h-3.5 bg-thaiYellow border border-royalGoldDark rounded-full animate-bounce [animation-delay:0.2s]"></div>
+                        <div class="w-3.5 h-3.5 bg-neutral-300 border border-royalGoldDark rounded-full animate-bounce [animation-delay:0.4s]"></div>
+                    </div>
+                    <p class="text-xs text-neutral-700 font-traditional">AI กำลังประมวลผลข้อร้องเรียนจำลองตามประวัติศาสตร์แบบเรียลไทม์...</p>
+                </div>
+
+                <!-- Case Card -->
+                <div id="caseStudyBox" class="bg-white royal-border rounded-2xl p-5 space-y-4 hidden transition-all duration-300 shadow-md">
+                    <div class="flex items-center space-x-2 text-xs text-royalGoldDark font-bold font-traditional">
+                        <i class="fa-solid fa-circle-exclamation text-thaiBlack"></i>
+                        <span id="caseBoxTypeLabel" class="text-thaiBlack font-traditional">ฎีกาความเดือดร้อนของราษฎร</span>
+                    </div>
+                    
+                    <h4 id="caseStudyTitle" class="text-lg font-bold text-thaiBlack font-traditional leading-snug"></h4>
+                    <p id="caseStudyDesc" class="text-xs text-neutral-700 font-formal leading-relaxed"></p>
+                    
+                    <div id="caseStudyOptions" class="space-y-3.5 pt-2">
+                        <!-- Choices injected via JS -->
+                    </div>
+                </div>
+
+                <!-- Game Result Modal Overlay (No Alert popup) -->
+                <div id="gameFeedback" class="bg-white royal-border rounded-2xl p-5 text-center space-y-3 hidden shadow-md">
+                    <span id="gameFeedbackIcon" class="text-4xl text-royalGold"></span>
+                    <h4 id="gameFeedbackTitle" class="text-lg font-bold font-traditional text-thaiBlack"></h4>
+                    <p id="gameFeedbackDesc" class="text-xs text-neutral-600 font-formal leading-relaxed"></p>
+                    <button onclick="resetGameBell()" class="w-full bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional text-sm py-2.5 px-4 rounded-xl hover:bg-royalGold hover:text-white transition-all">
+                        สั่นกระดิ่งรับฎีกาต่อไป
+                    </button>
+                </div>
+            </div>
+
+            <!-- SECTION 4: SMART QUIZ SYSTEM -->
+            <div id="viewQuiz" class="hidden space-y-4 transition-all duration-300">
+                
+                <!-- Start Quiz Intro Screen -->
+                <div id="quizStartScreen" class="text-center py-4 space-y-5 select-none">
+                    <div class="text-5xl text-royalGold">
+                        <i class="fa-solid fa-ribbon text-royalGold"></i>
+                    </div>
+                    <div class="space-y-2">
+                        <h2 class="text-2xl font-bold font-traditional text-thaiBlack">แบบทดสอบวัดระดับวิสัยทัศน์</h2>
+                        <p class="text-xs text-neutral-600 max-w-xs mx-auto leading-relaxed font-formal">
+                            เลือกระบบทดสอบที่คุณต้องการด้านล่างเพื่อพัฒนาและพิสูจน์ภูมิความรู้ของคุณ
+                        </p>
+                    </div>
+
+                    <!-- Custom Quiz Selector Mode -->
+                    <div class="grid grid-cols-2 gap-3 max-w-sm mx-auto">
+                        <button onclick="startQuizNow()" class="bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional py-3 px-4 rounded-xl hover:bg-royalGold hover:text-white transition-all text-sm shadow-sm">
+                            <i class="fa-solid fa-list-check mb-1 block text-base"></i> สุ่มข้อสอบ 20 ข้อ (ปกติ)
+                        </button>
+                        <button onclick="showAiQuizGeneratorSetup()" class="bg-white border border-royalGold text-royalGoldDark font-bold font-traditional py-3 px-4 rounded-xl hover:bg-royalGoldLight transition-all text-sm shadow-sm">
+                            <i class="fa-solid fa-wand-magic-sparkles mb-1 block text-base text-royalGold"></i> สร้างข้อสอบ AI (5 ข้อ)
+                        </button>
+                    </div>
+
+                    <!-- AI Quiz Topic Builder (Hidden by default) -->
+                    <div id="aiQuizSetupArea" class="bg-white p-4 rounded-2xl royal-border text-left max-w-sm mx-auto space-y-3 hidden shadow-sm">
+                        <span class="text-xs text-royalGoldDark font-bold font-traditional"><i class="fa-solid fa-magic text-thaiBlack mr-1"></i>ปัญญาประดิษฐ์ออกแบบข้อสอบ</span>
+                        <p class="text-xs text-neutral-600 font-formal">พิมพ์ระบุหัวข้อที่คุณสนใจเรียนรู้เป็นพิเศษ (เช่น "โครงการฝนหลวง", "การเลิกทาส ร.5", "ทศพิธราชธรรม") แล้วกดสร้างข้อสอบเฉพาะทาง</p>
+                        
+                        <div class="flex gap-2">
+                            <input id="aiQuizTopicInput" type="text" placeholder="ระบุหัวข้อเฉพาะทาง..." class="flex-1 text-xs bg-thaiCream border border-royalGold/30 rounded-xl p-2.5 outline-none font-formal">
+                            <button onclick="generateCustomAiQuiz()" class="bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional px-3 py-2.5 rounded-xl hover:bg-royalGold hover:text-white text-xs">
+                                สร้างเลย
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Traditional Evaluation Criteria Card -->
+                    <div class="bg-white p-4 rounded-2xl royal-border text-left max-w-sm mx-auto space-y-2 shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 flag-accent-bar"></div>
+                        <span class="text-xs text-royalGoldDark font-bold font-traditional"><i class="fa-solid fa-circle-info text-thaiBlack mr-1"></i>เกณฑ์การประเมินแบบสแตนดาร์ด</span>
+                        <ul class="text-xs text-neutral-700 space-y-1.5 list-disc pl-4 font-formal">
+                            <li>คะแนนผ่านการทดสอบ: <strong class="text-thaiBlack font-bold">15 คะแนนขึ้นไป</strong> (75% สำหรับข้อสอบสุ่ม 20 ข้อ)</li>
+                            <li>หากสอบตกคุณจะได้รับโอกาสประเมินตัวเองและเริ่มฝึกฝนใหม่อีกครั้ง</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Live Quiz Play Panel -->
+                <div id="quizPlayPanel" class="hidden space-y-4">
+                    <div class="flex items-center justify-between text-xs text-neutral-600 select-none pb-2 border-b-2 border-royalGold/20">
+                        <span class="font-bold font-traditional text-sm">ข้อสอบ <strong id="quizModeLabel" class="text-royalGoldDark">ปกติ</strong>: ข้อ <strong id="currentQuestionNumber" class="text-royalGoldDark font-bold text-base">1</strong> / <span id="totalQuestionsLimit">20</span> ข้อ</span>
+                        <span class="font-bold text-thaiBlack flex items-center gap-1 font-traditional">
+                            <i class="fa-solid fa-circle-check text-royalGold"></i> <span id="liveScore">0/20</span>
+                        </span>
+                    </div>
+
+                    <div id="quizLoadingState" class="bg-white royal-border rounded-2xl p-6 text-center space-y-3 hidden">
+                        <i class="fa-solid fa-spinner animate-spin text-3xl text-royalGold"></i>
+                        <p class="text-xs text-neutral-700 font-traditional">AI กำลังกลั่นกรองและจัดเรียงข้อสอบตามหัวข้อที่คุณป้อน...</p>
+                    </div>
+
+                    <div id="quizQuestionContainer">
+                        <div class="bg-white p-5 rounded-2xl royal-border shadow-sm relative overflow-hidden mb-3">
+                            <div class="absolute top-0 left-0 right-0 h-1 flag-accent-bar"></div>
+                            <h3 id="quizQuestionText" class="text-sm font-bold text-thaiBlack leading-relaxed font-formal"></h3>
+                        </div>
+
+                        <div id="quizAnswersBox" class="space-y-3">
+                            <!-- 4 choices generated here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Live Scoreboard Summary Overlay (No Alert Window) -->
+                <div id="quizResultPanel" class="hidden text-center py-6 space-y-6">
+                    <div id="resultStatusGraphic" class="relative inline-block text-royalGold text-7xl">
+                        <!-- Will display circular progress or cup graphic -->
+                    </div>
+
+                    <div class="space-y-2">
+                        <h2 id="resultTitle" class="text-2xl font-bold font-traditional text-thaiBlack"></h2>
+                        <p id="resultDesc" class="text-xs text-neutral-600 font-formal leading-relaxed max-w-xs mx-auto"></p>
+                    </div>
+
+                    <div class="bg-white royal-border rounded-2xl p-4 max-w-xs mx-auto flex justify-around items-center shadow-sm">
+                        <div class="text-center">
+                            <span class="block text-2xl font-black text-thaiBlack" id="finalCorrectScore">0</span>
+                            <span class="text-[10px] text-neutral-500 uppercase tracking-wider font-bold font-traditional">ตอบถูก (ข้อ)</span>
+                        </div>
+                        <div class="h-8 w-[1px] bg-royalGold/30"></div>
+                        <div class="text-center">
+                            <span class="block text-2xl font-black text-thaiBlack" id="finalPercentage">0%</span>
+                            <span class="text-[10px] text-neutral-500 uppercase tracking-wider font-bold font-traditional">ความแม่นยำ</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-2" id="quizActionArea">
+                        <!-- Action button injected depending on pass/fail logic -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- SECTION 5: AI TUTOR SYSTEM (New Feature Powered by Gemini API) -->
+            <div id="viewAiTutor" class="hidden space-y-4 transition-all duration-300 flex flex-col h-full">
+                <div class="text-center space-y-1 select-none">
+                    <span class="text-xs bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-3 py-1 rounded-full font-bold font-traditional">
+                        <i class="fa-solid fa-microchip-ai mr-1"></i>ระบบปัญญาประดิษฐ์เสมือนจริง
+                    </span>
+                    <h2 class="text-2xl font-bold font-traditional text-thaiBlack">ผู้ช่วยพินิจศาสตร์พระราชา</h2>
+                    <p class="text-xs text-neutral-600 font-formal">ถามตอบประวัติศาสตร์ สรรค์สร้างศิลปะ และรับฟังเสียงพากย์เสมือนจริง</p>
+                </div>
+
+                <!-- Custom Navigation inside AI Assistant tab -->
+                <div class="grid grid-cols-3 gap-1 bg-white p-1 rounded-xl border border-royalGold/20">
+                    <button onclick="switchTutorSubTab('chat')" id="tutorSub-chat" class="py-1 px-1 rounded-lg text-[11px] font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all">
+                        💬 ติวเตอร์โต้ตอบ
+                    </button>
+                    <button onclick="switchTutorSubTab('plan')" id="tutorSub-plan" class="py-1 px-1 rounded-lg text-[11px] font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all">
+                        📋 วางแผนชุมชน AI
+                    </button>
+                    <button onclick="switchTutorSubTab('draw')" id="tutorSub-draw" class="py-1 px-1 rounded-lg text-[11px] font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all">
+                        🎨 ห้องภาพ AI
+                    </button>
+                </div>
+
+                <!-- AI CHAT PANEL -->
+                <div id="aiTutorChatPanel" class="space-y-4 flex-1 flex flex-col">
+                    <!-- Chat History Window -->
+                    <div id="chatHistoryWindow" class="flex-1 min-h-[220px] max-h-[300px] overflow-y-auto bg-white p-3.5 rounded-2xl royal-border space-y-3 custom-scrollbar flex flex-col shadow-sm">
+                        <!-- Standard Welcome Message -->
+                        <div class="bg-royalGoldLight/20 border border-royalGold/30 rounded-2xl p-3.5 text-xs leading-relaxed max-w-[85%] self-start space-y-1.5 text-thaiBlack font-formal relative">
+                            <p class="font-bold text-royalGoldDark flex items-center gap-1 font-traditional text-sm">
+                                <i class="fa-solid fa-robot text-thaiBlack"></i> ติวเตอร์ศาสตร์พระราชา:
+                            </p>
+                            <p>สวัสดีครับคุณผู้เรียน ยินดีต้อนรับสู่ศูนย์กลางการเรียนรู้อัจฉริยะ คุณมีข้อสงสัยเกี่ยวกับประวัติศาสตร์ราชวงศ์ไทย หรืออยากให้แนะนำศาสตร์พระราชาข้อใด พิมพ์ถามได้เลยครับ! (กดปุ่ม 🔊 เพื่อพากย์เสียงจำลองแบบใหม่ได้ทันที)</p>
+                        </div>
+                    </div>
+
+                    <!-- Quick Prompts suggestions to trigger quick tutor queries -->
+                    <div class="space-y-1.5">
+                        <p class="text-[10px] uppercase text-neutral-500 tracking-wider font-bold font-traditional">หัวข้อแนะนำ:</p>
+                        <div class="flex flex-wrap gap-1.5">
+                            <button onclick="sendQuickPrompt('อธิบายโครงการแกล้งดิน')" class="text-[10px] bg-white hover:bg-royalGoldLight border border-royalGold/30 rounded-full px-2.5 py-1 text-thaiBlack font-traditional transition-all">
+                                แกล้งดินคืออะไร?
+                            </button>
+                            <button onclick="sendQuickPrompt('ทศพิธราชธรรม 10 มีอะไรบ้าง')" class="text-[10px] bg-white hover:bg-royalGoldLight border border-royalGold/30 rounded-full px-2.5 py-1 text-thaiBlack font-traditional transition-all">
+                                ทศพิธราชธรรม 10
+                            </button>
+                            <button onclick="sendQuickPrompt('อธิบายแนวคิดเศรษฐกิจพอเพียง')" class="text-[10px] bg-white hover:bg-royalGoldLight border border-royalGold/30 rounded-full px-2.5 py-1 text-thaiBlack font-traditional transition-all">
+                                พอเพียงคืออะไร?
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Input panel inside frame -->
+                    <div class="flex items-center space-x-1.5 pt-1">
+                        <input id="aiTutorInput" type="text" placeholder="สอบถามเรื่องศาสตร์พระราชา..." class="flex-1 bg-white border border-royalGold/40 focus:border-royalGold rounded-xl py-2.5 px-3.5 text-xs text-thaiBlack font-formal placeholder-neutral-400 outline-none transition-all">
+                        <button onclick="sendTutorMessage()" class="bg-royalGoldLight border border-royalGold hover:bg-royalGold hover:text-white active:scale-95 text-royalGoldDark font-bold rounded-xl px-4 py-2.5 transition-all text-xs flex items-center justify-center">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- AI COMMUNTY PLANNER PANEL -->
+                <div id="aiTutorPlanPanel" class="space-y-4 hidden flex-1 flex flex-col">
+                    <div class="bg-white p-4 rounded-2xl royal-border space-y-3 shadow-sm">
+                        <span class="text-xs text-royalGoldDark font-bold font-traditional">
+                            <i class="fa-solid fa-seedling text-thaiBlack mr-1"></i>จำลองแผนพัฒนาวิถีความยั่งยืน
+                        </span>
+                        <p class="text-[11px] text-neutral-600 font-formal">
+                            ป้อนสภาพแวดล้อมและระบุความทุกข์ร้อนในท้องถิ่นของคุณ เพื่อให้ AI ประมวลการแก้ปัญหาตามศาสตร์พระราชา (ภูมิสังคม) พร้อมรังสรรค์ภาพและเสียงบรรยายประกอบ
+                        </p>
+                        
+                        <div class="space-y-2.5 text-xs font-formal">
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-700 mb-1">ภูมิภาค / จังหวัดของคุณ:</label>
+                                <input id="planLocation" type="text" placeholder="เช่น ต.แม่สลอง อ.แม่ฟ้าหลวง จ.เชียงราย" class="w-full bg-thaiCream border border-royalGold/30 rounded-xl p-2.5 outline-none font-formal">
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-700 mb-1">ลักษณะภูมิประเทศทางกายภาพ:</label>
+                                <select id="planTerrain" class="w-full bg-thaiCream border border-royalGold/30 rounded-xl p-2.5 outline-none font-formal">
+                                    <option value="ภูเขาสูงชันและป่าต้นน้ำ">ภูเขาสูงชันและป่าต้นน้ำ</option>
+                                    <option value="ที่ราบลุ่มฝนแล้งซ้ำซาก">ที่ราบลุ่มฝนแล้งซ้ำซาก</option>
+                                    <option value="ที่ดินเปรี้ยว/ดินพรุ/ดินเค็ม">ที่ดินเค็ม/ที่ดินเปรี้ยวจัดปลูกพืชไม่ขึ้น</option>
+                                    <option value="ชุมชนเมืองน้ำท่วมซ้ำซาก/น้ำเสีย">พื้นที่ราบลุ่มแม่น้ำ/น้ำเสียน้ำหนุนซ้ำซาก</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-[11px] font-bold text-neutral-700 mb-1">ความทุกข์ยากของพสกนิกรที่ต้องการแก้ไข:</label>
+                                <textarea id="planProblem" rows="2" placeholder="เช่น ดินแข็ง ปลูกข้าวไม่ได้ผลผลิต แหล่งน้ำธรรมชาติแห้งขอดในหน้าแล้ง..." class="w-full bg-thaiCream border border-royalGold/30 rounded-xl p-2.5 outline-none font-formal resize-none"></textarea>
+                            </div>
+                            
+                            <button onclick="generateRoyalPlan()" class="w-full bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional py-2.5 rounded-xl hover:bg-royalGold hover:text-white transition-all text-xs flex items-center justify-center gap-1.5 shadow-sm">
+                                <i class="fa-solid fa-wand-magic-sparkles text-royalGold"></i> รังสรรค์โครงการพระราชดำริจำลอง
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Plan Loading state -->
+                    <div id="planLoadingState" class="bg-white royal-border rounded-2xl p-6 text-center space-y-3 hidden shadow-sm">
+                        <i class="fa-solid fa-compass-drafting animate-spin text-3xl text-royalGold"></i>
+                        <p class="text-xs text-neutral-700 font-traditional">AI กำลังวิเคราะห์ภูมิสังคมและประมวลผลศาสตร์พระราชาเฉพาะถิ่น...</p>
+                    </div>
+
+                    <!-- Plan Output Screen -->
+                    <div id="planOutputBox" class="bg-white royal-border rounded-2xl p-5 space-y-4 hidden transition-all duration-300 shadow-md">
+                        <div class="flex items-center justify-between text-xs text-royalGoldDark font-bold font-traditional pb-2 border-b border-royalGold/20">
+                            <span class="text-thaiBlack"><i class="fa-solid fa-scroll text-royalGold mr-1"></i> โครงการจำลองพัฒนาเฉพาะพื้นที่</span>
+                            <span id="planStarsReward" class="bg-royalGoldLight px-2 py-0.5 rounded-full border border-royalGold/30 text-[10px]">+50 ดาว</span>
+                        </div>
+
+                        <h4 id="planOutputTitle" class="text-base font-bold text-thaiBlack font-traditional leading-snug"></h4>
+                        
+                        <div class="space-y-3">
+                            <div class="bg-thaiCream p-3 rounded-xl border border-royalGold/20">
+                                <h5 class="text-xs font-bold text-royalGoldDark font-traditional mb-1">🔍 บทวิเคราะห์ภูมิสังคมโดยย่อ</h5>
+                                <p id="planOutputAnalysis" class="text-[11px] text-neutral-700 leading-relaxed font-formal"></p>
+                            </div>
+
+                            <div class="space-y-2">
+                                <h5 class="text-xs font-bold text-royalGoldDark font-traditional">🛠️ ขั้นตอนการดำเนินงานที่แนะนำ</h5>
+                                <div id="planOutputSteps" class="space-y-2">
+                                    <!-- Steps injected by JS -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Action buttons linking image and audio synthesis directly from plan outputs -->
+                        <div class="grid grid-cols-2 gap-2 pt-2 border-t border-dashed border-royalGold/30">
+                            <button id="planDrawBtn" onclick="triggerPlanDrawing()" class="bg-white border border-royalGold text-royalGoldDark font-bold font-traditional text-[11px] py-2 px-2.5 rounded-xl hover:bg-royalGoldLight transition-all flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-image text-royalGold"></i> สั่ง AI วาดแผนภาพ
+                            </button>
+                            <button id="planSpeakBtn" onclick="triggerPlanSpeaking()" class="bg-white border border-royalGold text-royalGoldDark font-bold font-traditional text-[11px] py-2 px-2.5 rounded-xl hover:bg-royalGoldLight transition-all flex items-center justify-center gap-1">
+                                <i class="fa-solid fa-volume-high text-royalGold"></i> 🔊 ฟังเสียงสรุปแผน
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI ILLUSTRATOR DRAW PANEL -->
+                <div id="aiTutorDrawPanel" class="space-y-4 hidden flex-1 flex flex-col">
+                    <div class="bg-white p-4 rounded-2xl royal-border space-y-3 shadow-sm">
+                        <span class="text-xs text-royalGoldDark font-bold font-traditional"><i class="fa-solid fa-wand-magic-sparkles text-thaiBlack mr-1"></i>AI วาดภาพจินตนาการโครงการราชดำริ</span>
+                        <p class="text-xs text-neutral-600 font-formal">พิมพ์ป้อนหัวข้อทัศนียภาพหรือองค์ประกอบตามจินตนาการเพื่อสั่งให้ AI สรรค์สร้างภาพร่างที่น่าสนใจขึ้นมาอย่างรวดเร็ว (โมเดล Imagen 4.0)</p>
+                        
+                        <div class="flex gap-2">
+                            <input id="aiDrawPromptInput" type="text" placeholder="เช่น 'กังหันน้ำชัยพัฒนาแนวภาพวาดพรีเซนเทชั่นสีสันอบอุ่น'" class="flex-1 text-xs bg-thaiCream border border-royalGold/30 rounded-xl p-2.5 outline-none font-formal">
+                            <button onclick="generateIllustration()" class="bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional px-4 py-2.5 rounded-xl hover:bg-royalGold hover:text-white text-xs flex items-center gap-1">
+                                <i class="fa-solid fa-palette"></i> วาด
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Live Render View / Output canvas -->
+                    <div id="drawOutputWrapper" class="bg-white royal-border rounded-3xl p-4 flex flex-col items-center justify-center min-h-[220px] relative overflow-hidden shadow-sm">
+                        <!-- Default state -->
+                        <div id="drawDefaultPlaceholder" class="text-center space-y-2 select-none">
+                            <i class="fa-regular fa-image text-5xl text-royalGold"></i>
+                            <p class="text-xs text-neutral-500 font-traditional">ป้อนไอเดียและให้เทคโนโลยีสร้างทัศนียภาพจำลองตรงนี้</p>
+                        </div>
+
+                        <!-- Generating Loader state -->
+                        <div id="drawLoadingIndicator" class="hidden text-center space-y-3">
+                            <i class="fa-solid fa-rotate animate-spin text-4xl text-royalGold"></i>
+                            <p class="text-xs text-neutral-700 font-traditional animate-pulse">ปัญญาประดิษฐ์กำลังผสมผสานลายเส้นจินตนาการภาพของคุณ...</p>
+                        </div>
+
+                        <!-- Rendered Image -->
+                        <div id="drawImageContainer" class="hidden w-full space-y-3 text-center">
+                            <img id="renderedAiImage" src="" alt="AI Generated Graphic" class="w-full max-h-[180px] object-cover rounded-xl border border-royalGold shadow-inner">
+                            <div class="flex justify-center gap-2">
+                                <button onclick="saveImageToScrapbook()" class="text-xs bg-royalGoldLight border border-royalGold px-3 py-1.5 rounded-full font-bold font-traditional hover:bg-royalGold hover:text-white transition-all">
+                                    <i class="fa-solid fa-star"></i> บันทึกในสมุดสะสมภาพ
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 6: BADGES & GALLERY -->
+            <!-- Achievements earned in lessons and games -->
+            <div id="viewBadges" class="hidden space-y-4 transition-all duration-300">
+                <div class="text-center space-y-1 select-none">
+                    <h2 class="text-2xl font-bold font-traditional text-thaiBlack">เกียรติบัตรและสมุดสะสมภาพ</h2>
+                    <p class="text-xs text-neutral-600 font-formal">ผลสัมฤทธิ์ที่คุณสะสมไว้จากการเรียนรู้ในบทเรียนและการทำงานร่วมกับ AI</p>
+                </div>
+
+                <!-- Tab inner switcher: Badge vs Gallery -->
+                <div class="grid grid-cols-2 gap-2 bg-white p-1 rounded-xl border border-royalGold/20">
+                    <button onclick="switchBadgesSubTab('badge')" id="badgesSub-badge" class="py-1 px-2 rounded-lg text-xs font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all">
+                        🏅 เหรียญรางวัลเกียรติยศ
+                    </button>
+                    <button onclick="switchBadgesSubTab('gallery')" id="badgesSub-gallery" class="py-1 px-2 rounded-lg text-xs font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all">
+                        🖼️ ภาพวาดฝีมือปัญญาประดิษฐ์
+                    </button>
+                </div>
+
+                <div id="badgesDisplayPanel" class="space-y-4">
+                    <!-- Badge Achievement Grid -->
+                    <div class="grid grid-cols-2 gap-3" id="badgesContainer">
+                        <!-- Badges injected via state logic -->
+                    </div>
+                </div>
+
+                <div id="galleryDisplayPanel" class="space-y-4 hidden">
+                    <!-- Photo grid of generated images saved locally -->
+                    <div class="grid grid-cols-2 gap-3" id="savedImagesContainer">
+                        <!-- AI Generated images list here -->
+                    </div>
+                </div>
+            </div>
+
+        </main>
+
+        <!-- Fixed at the bottom for smooth single-page responsiveness (Expanded with Tutor button) -->
+        <nav class="bg-thaiCream border-t border-royalGold/30 px-1 py-3 flex justify-around items-center text-xs text-neutral-500 select-none z-50 shadow-md">
+            <button onclick="switchTab('learn')" id="nav-learn" class="flex flex-col items-center space-y-1 text-royalGoldDark font-bold transition-all duration-200">
+                <i class="fa-solid fa-book-open text-base"></i>
+                <span class="text-[10px] font-traditional">บทเรียน</span>
+            </button>
+            <button onclick="switchTab('game')" id="nav-game" class="flex flex-col items-center space-y-1 hover:text-thaiBlack transition-all duration-200">
+                <i class="fa-solid fa-bell text-base"></i>
+                <span class="text-[10px] font-traditional">มินิเกม</span>
+            </button>
+            <button onclick="switchTab('quiz')" id="nav-quiz" class="flex flex-col items-center space-y-1 hover:text-thaiBlack transition-all duration-200">
+                <i class="fa-solid fa-circle-question text-base"></i>
+                <span class="text-[10px] font-traditional">ทำข้อสอบ</span>
+            </button>
+            <button onclick="switchTab('aiTutor')" id="nav-aiTutor" class="flex flex-col items-center space-y-1 hover:text-thaiBlack transition-all duration-200">
+                <i class="fa-solid fa-robot text-base"></i>
+                <span class="text-[10px] font-traditional">AI ติวเตอร์</span>
+            </button>
+            <button onclick="switchTab('badges')" id="nav-badges" class="flex flex-col items-center space-y-1 hover:text-thaiBlack transition-all duration-200">
+                <i class="fa-solid fa-award text-base"></i>
+                <span class="text-[10px] font-traditional">สะสมรางวัล</span>
+            </button>
+        </nav>
+
+    </div>
+
+    <script>
+        // App Core State
+        const AppState = {
+            stars: 0,
+            progress: {
+                chaptersRead: [],
+                completedChaptersCount: 0,
+                highScore: 0,
+                badges: {
+                    firstRead: false,
+                    gameBeaten: false,
+                    perfectScore: false,
+                    quizPassed: false
+                }
+            },
+            currentQuiz: {
+                active: false,
+                isAiQuiz: false,
+                questions: [],
+                currentIndex: 0,
+                score: 0,
+                answers: []
+            },
+            currentGame: {
+                activeCaseId: null,
+                mode: 'classic', // classic or ai
+                aiCategory: 'water', // water, soil, forest, livelihood
+                activeAiChoices: []
+            },
+            currentPlan: {
+                active: false,
+                planTitle: "",
+                analysis: "",
+                steps: [],
+                imagePrompt: "",
+                audioSpeech: ""
+            },
+            tutorChatHistory: [],
+            savedImages: [] // Array of Base64 strings saved locally
+        };
+
+        // Initialize App on Window load
+        window.onload = function() {
+            updateTime();
+            setInterval(updateTime, 60000);
+            loadSaveData();
+            renderDashboardState();
+
+            // Handle press "Enter" inside tutor message field
+            const chatInput = document.getElementById('aiTutorInput');
+            if (chatInput) {
+                chatInput.addEventListener('keypress', function(e) {
+                    if (e.key === 'Enter') {
+                        sendTutorMessage();
+                    }
+                });
+            }
+        };
+
+        function updateTime() {
+            const timeSpan = document.getElementById('statusBarTime');
+            if (timeSpan) {
+                const now = new Date();
+                const h = String(now.getHours()).padStart(2, '0');
+                const m = String(now.getMinutes()).padStart(2, '0');
+                timeSpan.textContent = `${h}:${m}`;
+            }
+        }
+
+        // Local Storage integration for gamification and progress persistence
+        function saveProgress() {
+            localStorage.setItem('royal_learn_app_save', JSON.stringify(AppState.progress));
+            localStorage.setItem('royal_learn_app_stars', AppState.stars.toString());
+            localStorage.setItem('royal_learn_app_images', JSON.stringify(AppState.savedImages));
+        }
+
+        function loadSaveData() {
+            const progressRaw = localStorage.getItem('royal_learn_app_save');
+            const starsRaw = localStorage.getItem('royal_learn_app_stars');
+            const imagesRaw = localStorage.getItem('royal_learn_app_images');
+            if (progressRaw) {
+                try {
+                    AppState.progress = JSON.parse(progressRaw);
+                } catch(e) {
+                    console.error("Save corrupted reset default");
+                }
+            }
+            if (starsRaw) {
+                AppState.stars = parseInt(starsRaw) || 0;
+            }
+            if (imagesRaw) {
+                try {
+                    AppState.savedImages = JSON.parse(imagesRaw);
+                } catch(e) {
+                    console.error("Image store read failed");
+                }
+            }
+            document.getElementById('starCounter').textContent = AppState.stars;
+        }
+
+        // Add visual stars to top panel with pleasant notification
+        function addStars(num) {
+            AppState.stars += num;
+            document.getElementById('starCounter').textContent = AppState.stars;
+            saveProgress();
+        }
+
+        // Main Tab Switching Controller
+        function switchTab(tabId) {
+            // Hide all main section containers
+            document.getElementById('viewLearn').classList.add('hidden');
+            document.getElementById('viewChapterDetail').classList.add('hidden');
+            document.getElementById('viewGame').classList.add('hidden');
+            document.getElementById('viewQuiz').classList.add('hidden');
+            document.getElementById('viewAiTutor').classList.add('hidden');
+            document.getElementById('viewBadges').classList.add('hidden');
+
+            // Reset tab navigation icons highlight
+            const navIds = ['learn', 'game', 'quiz', 'aiTutor', 'badges'];
+            navIds.forEach(id => {
+                const navBtn = document.getElementById(`nav-${id}`);
+                if (navBtn) {
+                    navBtn.className = "flex flex-col items-center space-y-1 hover:text-thaiBlack transition-all duration-200 text-neutral-500";
+                }
+            });
+
+            // Highlight Active Nav and Show Active container
+            const activeNav = document.getElementById(`nav-${tabId}`);
+            if (activeNav) {
+                activeNav.className = "flex flex-col items-center space-y-1 text-royalGoldDark font-bold transition-all duration-200 scale-105";
+            }
+
+            if (tabId === 'learn') {
+                document.getElementById('viewLearn').classList.remove('hidden');
+                renderDashboardState();
+            } else if (tabId === 'game') {
+                document.getElementById('viewGame').classList.remove('hidden');
+                resetGameBell();
+            } else if (tabId === 'quiz') {
+                document.getElementById('viewQuiz').classList.remove('hidden');
+                // Only show screen matching current session status
+                if (AppState.currentQuiz.active) {
+                    document.getElementById('quizStartScreen').classList.add('hidden');
+                    document.getElementById('quizPlayPanel').classList.remove('hidden');
+                    document.getElementById('quizResultPanel').classList.add('hidden');
+                } else {
+                    document.getElementById('quizStartScreen').classList.remove('hidden');
+                    document.getElementById('quizPlayPanel').classList.add('hidden');
+                    document.getElementById('quizResultPanel').classList.add('hidden');
+                }
+            } else if (tabId === 'aiTutor') {
+                document.getElementById('viewAiTutor').classList.remove('hidden');
+                switchTutorSubTab('chat');
+            } else if (tabId === 'badges') {
+                document.getElementById('viewBadges').classList.remove('hidden');
+                switchBadgesSubTab('badge');
+            }
+
+            // Smooth automatic scroll back to top of main frame
+            document.getElementById('appMain').scrollTop = 0;
+        }
+
+        // Sub-tab handlers for AI Tutor (Updated for 3 options)
+        function switchTutorSubTab(subTab) {
+            const chatBtn = document.getElementById('tutorSub-chat');
+            const planBtn = document.getElementById('tutorSub-plan');
+            const drawBtn = document.getElementById('tutorSub-draw');
+            const chatPanel = document.getElementById('aiTutorChatPanel');
+            const planPanel = document.getElementById('aiTutorPlanPanel');
+            const drawPanel = document.getElementById('aiTutorDrawPanel');
+
+            // Reset classes
+            [chatBtn, planBtn, drawBtn].forEach(b => {
+                if (b) b.className = "py-1 px-1 rounded-lg text-[11px] font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all";
+            });
+            [chatPanel, planPanel, drawPanel].forEach(p => {
+                if (p) p.classList.add('hidden');
+            });
+
+            if (subTab === 'chat') {
+                chatBtn.className = "py-1 px-1 rounded-lg text-[11px] font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all";
+                chatPanel.classList.remove('hidden');
+            } else if (subTab === 'plan') {
+                planBtn.className = "py-1 px-1 rounded-lg text-[11px] font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all";
+                planPanel.classList.remove('hidden');
+            } else {
+                drawBtn.className = "py-1 px-1 rounded-lg text-[11px] font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all";
+                drawPanel.classList.remove('hidden');
+            }
+        }
+
+        // Sub-tab handlers for achievements and saved photos
+        function switchBadgesSubTab(subTab) {
+            const badgeBtn = document.getElementById('badgesSub-badge');
+            const galleryBtn = document.getElementById('badgesSub-gallery');
+            const badgePanel = document.getElementById('badgesDisplayPanel');
+            const galleryPanel = document.getElementById('galleryDisplayPanel');
+
+            if (subTab === 'badge') {
+                badgeBtn.className = "py-1 px-2 rounded-lg text-xs font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all";
+                galleryBtn.className = "py-1 px-2 rounded-lg text-xs font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all";
+                badgePanel.classList.remove('hidden');
+                galleryPanel.classList.add('hidden');
+                renderBadgesView();
+            } else {
+                galleryBtn.className = "py-1 px-2 rounded-lg text-xs font-bold font-traditional bg-royalGoldLight text-royalGoldDark transition-all";
+                badgeBtn.className = "py-1 px-2 rounded-lg text-xs font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all";
+                galleryPanel.classList.remove('hidden');
+                badgePanel.classList.add('hidden');
+                renderGalleryView();
+            }
+        }
+
+        const chaptersData = {
+            1: {
+                title: "ความหมายและคำนิยามสำคัญ",
+                infographics: [
+                    {
+                        concept: "กษัตริย์ & พระราชา",
+                        desc: "ภาษาสันสกฤต หมายถึง 'ผู้ป้องกันหรือนักรบ' สอดคล้องกับวรรณะกษัตริย์ในสังคมอินเดียโบราณ ส่วนคำว่า 'พระราชา' หมายถึง หัวหน้าเผ่า นักปกครอง ผู้ให้ความสงบร่มเย็นแก่ปวงประชา"
+                    },
+                    {
+                        concept: "จักรพรรดิราช",
+                        desc: "กษัตริย์ผู้ยิ่งใหญ่เหนือมวลมหากษัตริย์ทั้งปวงในสากลจักรวาล ตามพุทธปรัมปราคติผู้ที่สั่งสมบารมีสามารถเลือกเป็นศาสดาเอกทางธรรม หรือเป็นจักรพรรดิราชทางโลกเพื่อยังประโยชน์สุขให้มนุษยชาติ"
+                    },
+                    {
+                        concept: "ธรรมราชา",
+                        desc: "ผู้รักษา ปฏิบัติธรรม และเป็นบ่อเกิดแห่งความยุติธรรมทั้งปวง การปกครองตามพุทธศาสนารูปแบบของพันธสัญญาเพื่อความผาสุกโดยยึดมั่นในหลักทศพิธราชธรรม"
+                    },
+                    {
+                        concept: "พระเจ้าอยู่หัว",
+                        desc: "คำเรียกที่พสกนิกรถวายความเคารพเทิดทูนสูงสุด ยอมรับในพระบรมราชสถานะเสมือนดั่ง 'พระพุทธเจ้าอยู่เหนือเกล้า' เป็นสิริมงคลอันสูงสุดของประเทศ"
+                    },
+                    {
+                        concept: "พระเจ้าแผ่นดิน & ในหลวง",
+                        desc: "ผู้เป็นเจ้าของแผ่นดินที่บำรุงรักษาพื้นที่เพื่อให้พสกนิกรมีที่ทำมาหากิน ส่วนคำว่า 'ในหลวง' หรือ 'พ่อหลวง' สื่อถึงผู้ปกครองที่เป็นพ่อที่อยู่เหนือเกล้าเหนือชีวิตพึ่งพิงได้ยามยาก"
+                    }
+                ]
+            },
+            2: {
+                title: "ความสำคัญของสถาบันพระมหากษัตริย์",
+                infographics: [
+                    {
+                        concept: "แกนกลางแห่งความมั่นคง",
+                        desc: "เป็นเสาหลักค้ำจุนประเทศเคียงคู่ไปกับสถาบันชาติและศาสนา ทำหน้าที่เป็นแกนหลักหลอมรวมจิตใจ ป้องกันความขัดแย้ง และธำรงความเป็นไทยให้คงอยู่สืบเนื่องโดยไม่ขาดตอน"
+                    },
+                    {
+                        concept: "สีน้ำเงินบนธงไตรรงค์",
+                        desc: "จดจำความหมายอันลึกซึ้งของธงชาติไทย (ธงไตรรงค์) ที่ริเริ่มในรัชสมัย ร.๖ โดย 'แดง' สื่อถึงชาติและการเสียสละ, 'ขาว' สื่อถึงความบริสุทธิ์ของศาสนา และ 'น้ำเงิน' สื่อถึงสีโปรดส่วนพระองค์ของสถาบันพระมหากษัตริย์"
+                    },
+                    {
+                        concept: "สัญลักษณ์แห่งความเป็นเอกภาพ",
+                        desc: "ทำหน้าที่ประสานสามสถาบันหลักและอำนาจอธิปไตยทั้ง 3 ฝ่าย (นิติบัญญัติ บริหาร และตุลาการ) เข้าด้วยกันภายใต้พระปรมาภิไธย สร้างจิตสำนึกร่วมกันของคนในชาติไม่ว่าจะต่างเชื้อชาติหรือศาสนาใด"
+                    }
+                ]
+            },
+            3: {
+                title: "สถานะและรูปแบบความสัมพันธ์ในสังคมไทย",
+                infographics: [
+                    {
+                        concept: "บิดาของราษฎร (บิดาปกครองบุตร)",
+                        desc: "ความสัมพันธ์แบบครอบครัวใหญ่ที่สืบทอดแต่โบราณ พระมหากษัตริย์เป็นดั่งบิดาที่คอยส่งเสริมเสรีภาพ ความมั่นคงทางเศรษฐกิจ และสั่งสอนศีลธรรม ประชาชนมีสิทธิสั่นกระดิ่งเพื่อทูลถวายฎีการ้องทุกข์โดยตรง"
+                    },
+                    {
+                        concept: "กษัตริย์ผู้ทรงธรรม (ธรรมราชา)",
+                        desc: "การปกครองที่เป็นพันธสัญญายึดมั่นในจักรวรรดิวัตร 12, ราชจรรยานุวัตร 4 และทศพิธราชธรรม 10 ประการ แผ่บารมีเกื้อหนุนราษฎรไม่ใช่ด้วยกำลังทหาร แต่ด้วยคุณธรรมอันสูงสุด"
+                    },
+                    {
+                        concept: "กษัตริย์ผู้เป็นเทวราช & พระโพธิสัตว์",
+                        desc: "การผสมผสานลัทธิเทวราชของพราหมณ์ (กษัตริย์อวตารของพระผู้เป็นเจ้า) เข้ากับคตินิยมชาวพุทธที่มองว่าพระองค์คือพระโพธิสัตว์ผู้สั่งสมพระบารมีเพื่อโปรดสัตว์และก้าวสู่การตรัสรู้ in อนาคต"
+                    }
+                ]
+            },
+            4: {
+                title: "คุณูปการต่อสังคมไทย 9 ประการ",
+                infographics: [
+                    {
+                        concept: "1. ศูนย์รวมจิตใจของราษฎร",
+                        desc: "ทรงสร้างความสมานฉันท์และเอกภาพท่ามกลางความหลากหลายทางการเมือง เชื้อชาติ และศาสนา"
+                    },
+                    {
+                        concept: "2. สัญลักษณ์แห่งความสืบต่อเนื่องของสังคม",
+                        desc: "สถาบันหลักสืบทอดโบราณราชประเพณีไม่เคยขาดตอนตั้งแต่สุโขทัย ช่วยให้ประเทศรักษารากเหง้าและก้าวหน้าอย่างมั่นคง"
+                    },
+                    {
+                        concept: "3. องค์เอกอัครศาสนูปถัมภก",
+                        desc: "ทรงปกป้อง ทำนุบำรุง และเกื้อหนุนทุกศาสนาในไทยอย่างเสมอภาค เท่าเทียม ปราศจากวิกฤตความเกลียดชัง"
+                    },
+                    {
+                        concept: "4. การรักษาผลประโยชน์ของส่วนรวม",
+                        desc: "ทรงถ่วงดุลอำนาจด้วยพระราชสิทธิ์ในการยับยั้งกฎหมายและพระราชทานคำแนะนำ เพื่อรักษาสิทธิและสุขภาวะของราษฎรทุกคน"
+                    },
+                    {
+                        concept: "5. ทรงแก้ไขวิกฤตการณ์สำคัญของชาติ",
+                        desc: "บทบาทประวัติศาสตร์ในการยุติสงครามกลางเมืองและการจลาจลรุนแรง เช่น เหตุการณ์ 14 ตุลาคม 2516 และพฤษภาทมิฬ พ.ศ. 2535 ด้วยพระดำรัสไม่กี่ประโยค"
+                    },
+                    {
+                        concept: "6. ส่งเสริมความมั่นคงและการป้องกันประเทศ",
+                        desc: "ในฐานะจอมทัพไทย ทรงเสด็จเยี่ยมทหารตระเวนชายแดน ปลอบขวัญข้าราชการผู้ปฏิบัติหน้าที่ในท้องถิ่นทุรกันดารและภัยคุกคาม"
+                    },
+                    {
+                        concept: "7. ส่งเสริมสัมพันธไมตรีระหว่างประเทศ",
+                        desc: "รอยพระบาททูตสันถวไมตรี เช่น การประพาสยุโรปของ ร.๕ เพื่อรักษาสมดุลมหาอำนาจ และรักษาอธิปไตยของชาติ"
+                    },
+                    {
+                        concept: "8. ผู้นำการพัฒนาปฏิรูปและการริเริ่มสร้างสรรค์",
+                        desc: "การวางรากฐานระเบียบราชการ เลิกทาส เลิกไพร่ และโครงการพระราชดำริรวมกว่า 4,596 โครงการเพื่อสู้ความเดือดร้อน"
+                    },
+                    {
+                        concept: "9. การสนับสนุนการปกครองระบอบประชาธิปไตย",
+                        desc: "ทรงประกาศตนและยึดมั่นในการปกครองภายใต้รัฐธรรมนูญ เสริมสร้างความเข้มแข็งของระบบผ่านคำสอนและการทรงงาน"
+                    }
+                ]
+            },
+            5: {
+                title: "สิทธิและอำนาจในระบอบประชาธิปไตย",
+                infographics: [
+                    {
+                        concept: "สิทธินอกรัฐธรรมนูญ 4 ประการ",
+                        desc: "ประกอบด้วย 1. สิทธิที่จะให้คำตักเตือนแก่รัฐสภาหรือรัฐบาล 2. สิทธิที่จะได้ทรงรับทราบเรื่องราวต่างๆ ที่สำคัญของบ้านเมือง 3. สิทธิที่จะพระราชทานคำปรึกษาชี้แนะแก้ปัญหาราษฎร 4. สิทธิในการให้การสนับสนุนโครงการที่เป็นประโยชน์"
+                    },
+                    {
+                        concept: "พระราชอำนาจตามรัฐธรรมนูญ",
+                        desc: "พระราชอำนาจในการยับยั้งร่างพระราชบัญญัติ (ส่งคืนสภาเพื่อทบทวนภายใน 90 วัน), พระราชอำนาจขอให้ลงประชามติเพื่อแก้ไขรัฐธรรมนูญ และการแต่งตั้งผู้สำเร็จราชการแทนพระองค์"
+                    }
+                ]
+            },
+            6: {
+                title: "พระราชกรณียกิจหลักในสามด้าน",
+                infographics: [
+                    {
+                        concept: "พระราชพิธีและศาสนกิจ",
+                        desc: "ทรงเป็นประธานในพิธีที่สร้างขวัญกำลังใจแก่ราษฎร เช่น พิธีเปิดรัฐสภา พระราชพิธีเปลี่ยนเครื่องทรงพระแก้วมรกต และพระราชพิธีพืชมงคลจรดพระนังคัลแรกนาขวัญ"
+                    },
+                    {
+                        concept: "งานสงเคราะห์และช่วยเหลือประชาชน",
+                        desc: "พระราชทานทุนการศึกษาแก่เยาวชนยากไร้ พระราชทานสิ่งของยังชีพ ยารักษาโรค และเครื่องมือแพทย์ยามพสกนิกรเผชิญภัยพิบัติ อุทกภัย หรือโรคระบาดร้ายแรง"
+                    },
+                    {
+                        concept: "การพัฒนาสังคมอย่างยั่งยืน",
+                        desc: "ทรงแก้ปัญหาระยะยาวผ่านเกษตรทฤษฎีใหม่ ปรัชญาเศรษฐกิจพอเพียง โครงการหลวง โครงการแกล้งดิน โครงการแก้มลิง จนได้รับการเชิดชูเกียรติเป็นผู้นำด้านสันติภาพจาก UN"
+                    }
+                ]
+            }
+        };
+
+        // Render Learning Dashboard Stats
+        function renderDashboardState() {
+            const progress = AppState.progress.chaptersRead.length;
+            const total = Object.keys(chaptersData).length;
+            const percentage = Math.round((progress / total) * 100);
+            
+            document.getElementById('studyProgressPercentage').textContent = `${percentage}% สำเร็จ`;
+            document.getElementById('studyProgressBar').style.width = `${percentage}%`;
+
+            // Update icon status on each card
+            for (let i = 1; i <= 6; i++) {
+                const badge = document.getElementById(`badgeCh${i}`);
+                if (badge) {
+                    if (AppState.progress.chaptersRead.includes(i)) {
+                        badge.innerHTML = '<i class="fa-solid fa-circle-check text-royalGold"></i>';
+                    } else {
+                        badge.innerHTML = '<i class="fa-regular fa-circle-play text-royalGoldDark"></i>';
+                    }
+                }
+            }
+        }
+
+        // Open Chapter slide animation
+        function openChapter(id) {
+            AppState.currentGame.activeCaseId = null; // Close game state if any
+            const data = chaptersData[id];
+            if (!data) return;
+
+            const contentArea = document.getElementById('chapterContentArea');
+            let html = `
+                <div class="space-y-1 select-none relative pb-3 border-b border-royalGold/30">
+                    <span class="text-xs bg-royalGoldLight border border-royalGold/30 text-royalGoldDark px-2.5 py-0.5 rounded-full font-bold font-traditional">บทเรียนที่ ${id}</span>
+                    <h2 class="text-2xl font-bold font-traditional text-thaiBlack">${data.title}</h2>
+                </div>
+                <div class="space-y-4">
+            `;
+
+            data.infographics.forEach((item, index) => {
+                html += `
+                    <div class="bg-white p-4 rounded-xl border border-royalGold/30 space-y-2 hover:border-royalGold shadow-sm hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center space-x-2 text-thaiBlack font-bold font-traditional text-base">
+                            <span class="w-6 h-6 flex items-center justify-center bg-royalGoldLight border border-royalGold/30 rounded-full text-xs font-bold">${index + 1}</span>
+                            <span>${item.concept}</span>
+                        </div>
+                        <p class="text-xs text-neutral-700 leading-relaxed font-formal pl-8">${item.desc}</p>
+                    </div>
+                `;
+            });
+
+            html += `
+                <button onclick="markChapterRead(${id})" class="w-full bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional py-3 rounded-xl hover:bg-royalGold hover:text-white transition-all text-base mt-4 shadow-sm">
+                    <i class="fa-solid fa-check-circle mr-1.5"></i> บันทึกว่าเรียนรู้แล้ว (+15 ดวงดาว)
+                </button>
+            </div>`;
+
+            contentArea.innerHTML = html;
+
+            document.getElementById('viewLearn').classList.add('hidden');
+            document.getElementById('viewChapterDetail').classList.remove('hidden');
+            document.getElementById('appMain').scrollTop = 0;
+        }
+
+        function markChapterRead(id) {
+            if (!AppState.progress.chaptersRead.includes(id)) {
+                AppState.progress.chaptersRead.push(id);
+                addStars(15);
+                
+                // Track achievement of first reading
+                if (!AppState.progress.badges.firstRead) {
+                    AppState.progress.badges.firstRead = true;
+                    addStars(20);
+                }
+                
+                saveProgress();
+            }
+            backToDashboard();
+        }
+
+        function backToDashboard() {
+            document.getElementById('viewChapterDetail').classList.add('hidden');
+            document.getElementById('viewLearn').classList.remove('hidden');
+            renderDashboardState();
+        }
+
+        const gameCases = [
+            {
+                id: 1,
+                title: "วิกฤตน้ำเสียคลองมหาชัย",
+                desc: "ราษฎรแจ้งว่าน้ำในคูคลองส่งกลิ่นเน่าเสียรุนแรงเนื่องจากการระบายน้ำทะเลหนุนและโรงงานอุตสาหกรรม จนชาวบ้านทำเกษตรหรือจับสัตว์น้ำไม่ได้เลย",
+                choices: [
+                    { text: "ก่อสร้างประตูกันคลองชั่วคราว ดำเนินการโครงการแก้มลิง และสลับประตูปิดเปิดไล่น้ำเสียตามระดับน้ำขึ้นลงแบบน้ำดีไล่น้ำเสีย", correct: true, feedback: "ถูกต้อง! นี่คือโครงการแก้มลิงคลองมหาชัย-สนามชัย และการใช้น้ำดีขับไล่น้ำเสียตามศาสตร์พระราชา" },
+                    { text: "สร้างทำนบคอนกรีตปิดตายคลองทุกเส้นทาง ปล่อยให้น้ำแห้งขอดเพื่อขุดลอกโคลนทิ้งทั้งหมดทีเดียว", correct: false, feedback: "ผิดพลาด: การปิดตายคลองทำให้ชุมชนสูญเสียเส้นทางการน้ำโดยสิ้นเชิง และเป็นการแก้ปัญหาส่วนเดียวที่อาจส่งผลเสียต่อการระบายน้ำภาพรวม" },
+                    { text: "ออกกฎหมายสั่งปรับโรงงานอุตสาหกรรมในพื้นที่ให้ปิดตัวทันที เพื่อให้น้ำฟื้นฟูตามธรรมชาติโดยไม่ต้องก่อสร้างใดๆ", correct: false, feedback: "ผิดพลาด: แม้ต้องลดของเสีย แต่การสั่งปิดอุตสาหกรรมกะทันหันส่งผลกระทบต่อเศรษฐกิจและปากท้องของแรงงานในสังคมอย่างรุนแรง" }
+                ]
+            },
+            {
+                id: 2,
+                title: "ดินเปรี้ยวปลูกพืชไม่ขึ้น",
+                desc: "ฎีกาจากชาวบ้านพิกุลทองจังหวัดนราธิวาส รายงานว่าผืนดินในเขตที่ลุ่มพรุมีสภาพเป็นกรดจัดหรือดินเปรี้ยว ปลูกข้าวหรือพืชอาหารชนิดใดก็ล้มตายหมดสิ้น ราษฎรยากจนอย่างยิ่ง",
+                choices: [
+                    { text: "ใช้วิธี 'แกล้งดิน' โดยแกล้งทำให้ดินเปรี้ยวถึงขีดสุดด้วยการทำให้น้ำแห้งสลับเปียก แล้วล้างความเป็นกรดออกด้วยน้ำสะอาด ร่วมกับการใช้ปูนขาวปรับสภาพ", correct: true, feedback: "ถูกต้อง! โครงการแกล้งดิน ศูนย์ศึกษาพิกุลทองพิสูจน์แล้วว่าการขจัดเปรี้ยวช่วยฟื้นฟูที่ดินให้ปลูกพืชได้เต็มประสิทธิภาพ" },
+                    { text: "แนะนำให้ราษฎรทิ้งทำกินเดิม และย้ายถิ่นฐานขึ้นไปหักล้างถางป่าบนภูเขาสูงเพื่อหาผืนดินใหม่ในการกสิกรรมแทน", correct: false, feedback: "ผิดพลาด: การย้ายถิ่นฐานทำให้ราษฎรไร้ที่ทำกินมั่นคง และส่งผลให้เกิดการตัดไม้ทำลายป่าต้นน้ำจนพังทลาย" },
+                    { text: "พระราชทานเงินช่วยเหลือรายเดือนแก่ราษฎรไปเรื่อยๆ เพื่อซื้อข้าวสารจากต่างพื้นที่โดยไม่ต้องปลูกข้าวเอง", correct: false, feedback: "ผิดพลาด: การพึ่งพาเงินบริจาคโดยตรงไม่ช่วยให้เกิดความยั่งยืน และขัดกับหลักการพัฒนาเพื่อให้เกิด 'การพึ่งตนเอง' ในบั้นปลาย" }
+                ]
+            },
+            {
+                id: 3,
+                title: "ปัญหายาเสพติดและการทำลายป่าต้นน้ำบนภูเขาสูง",
+                desc: "ฎีกาจากผู้ใหญ่บ้านภาคเหนือพบว่า ชาวไทยภูเขายังคงทำการถางป่าทำไร่เลื่อนลอยเพื่อปลูกฝิ่นและค้ายาเสพติดเพราะขาดแคลนรายได้และองค์ความรู้ในการเกษตรอื่นๆ",
+                choices: [
+                    { text: "จัดตั้งโครงการหลวงเพื่อศึกษาและส่งเสริมการปลูกพืชผักเมืองหนาวทดแทนการปลูกฝิ่น คืนป่าต้นน้ำอย่างละมุนละม่อม", correct: true, feedback: "ถูกต้อง! โครงการหลวงสามารถยกระดับรายได้ชาวเขาจนหยุดปลูกฝิ่นได้อย่างสมบูรณ์แบบ ได้รับการยอมรับทั่วโลก" },
+                    { text: "ส่งกำลังทหารขึ้นไปเผาทำลายหมู่บ้านและกวาดต้อนชาวเขาทั้งหมดลงมาขังคุกในพื้นที่ลุ่มเพื่อไม่ให้ขึ้นไปปลูกฝิ่นอีก", correct: false, feedback: "ผิดพลาด: การใช้ความรุนแรงทำให้เกิดความขัดแย้ง แตกแยก และความไม่สงบด้านความมั่นคงตามแนวชายแดน" },
+                    { text: "แจกเมล็ดพันธุ์ข้าวให้ชาวเขานำไปปลูกบนเขาสูงชัน โดยไม่ต้องคำนึงถึงวิธีการบำรุงรักษาหรือสภาพภูมิประเทศ", correct: false, feedback: "ผิดพลาด: ข้าวส่วนใหญ่ปลูกไม่ได้ดีบนเขาสูงชัน และการไม่ควบคุมวิธีการปลูกยังคงทำให้เกิดการชะล้างพังทลายของดินต่อเนื่อง" }
+                ]
+            }
+        ];
+
+        // Synthesize metallic bell ring using pure Web Audio API (extremely robust, zero dependency)
+        function playSynthesizedBell() {
+            try {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                if (!AudioContext) return;
+                const ctx = new AudioContext();
+                const now = ctx.currentTime;
+                
+                const freqs = [587.33, 880.00, 1174.66, 1760.00]; // D5, A5, D6, A6 harmonics
+                freqs.forEach((f, i) => {
+                    const osc = ctx.createOscillator();
+                    const gain = ctx.createGain();
+                    
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(f, now);
+                    
+                    gain.gain.setValueAtTime(i === 0 ? 0.25 : 0.08, now);
+                    gain.gain.exponentialRampToValueAtTime(0.001, now + 1.2);
+                    
+                    osc.connect(gain);
+                    gain.connect(ctx.destination);
+                    
+                    osc.start(now);
+                    osc.stop(now + 1.3);
+                });
+            } catch(e) {
+                console.warn("Audio Context init blocked or unsupported on this device browser", e);
+            }
+        }
+
+        // Set game mode Classic vs AI Dynamic
+        function setGameMode(mode) {
+            AppState.currentGame.mode = mode;
+            const classicBtn = document.getElementById('gameModeClassic');
+            const aiBtn = document.getElementById('gameModeAI');
+            const aiConfig = document.getElementById('aiModeConfig');
+            const bellText = document.getElementById('bellStatusText');
+
+            if (mode === 'ai') {
+                classicBtn.className = "py-1.5 px-3 rounded-lg text-xs font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all";
+                aiBtn.className = "py-1.5 px-3 rounded-lg text-xs font-bold font-traditional bg-royalGoldLight border border-royalGold/30 text-royalGoldDark transition-all";
+                aiConfig.classList.remove('hidden');
+                bellText.textContent = "🔔 สั่นกระดิ่งเพื่อจำลองคดีด้วย AI";
+            } else {
+                classicBtn.className = "py-1.5 px-3 rounded-lg text-xs font-bold font-traditional bg-royalGoldLight border border-royalGold/30 text-royalGoldDark transition-all";
+                aiBtn.className = "py-1.5 px-3 rounded-lg text-xs font-bold font-traditional text-neutral-500 hover:text-thaiBlack transition-all";
+                aiConfig.classList.add('hidden');
+                bellText.textContent = "🔔 กดที่กระดิ่งเพื่อสั่นร้องทุกข์";
+            }
+            resetGameBell();
+        }
+
+        function setAiCategory(category) {
+            AppState.currentGame.aiCategory = category;
+            const cats = ['water', 'soil', 'forest', 'livelihood'];
+            cats.forEach(c => {
+                const btn = document.getElementById(`aiCat-${c}`);
+                if (btn) {
+                    if (c === category) {
+                        btn.className = "py-2 px-3 rounded-xl border border-royalGold text-thaiBlack font-bold bg-royalGoldLight font-traditional";
+                    } else {
+                        btn.className = "py-2 px-3 rounded-xl border border-neutral-200 text-neutral-600 font-traditional hover:border-royalGold";
+                    }
+                }
+            });
+        }
+
+        async function ringTheBell() {
+            const bell = document.getElementById('bellGraphic');
+            if (bell) {
+                bell.classList.add('animate-formal-bell');
+                setTimeout(() => bell.classList.remove('animate-formal-bell'), 1500);
+            }
+            playSynthesizedBell();
+
+            const caseStudyBox = document.getElementById('caseStudyBox');
+            const caseStudyTitle = document.getElementById('caseStudyTitle');
+            const caseStudyDesc = document.getElementById('caseStudyDesc');
+            const caseStudyOptions = document.getElementById('caseStudyOptions');
+            const gameFeedback = document.getElementById('gameFeedback');
+            const aiLoading = document.getElementById('aiGameLoading');
+
+            gameFeedback.classList.add('hidden');
+            caseStudyBox.classList.add('hidden');
+
+            if (AppState.currentGame.mode === 'ai') {
+                // Call Gemini API to generate dynamic historical case
+                aiLoading.classList.remove('hidden');
+                document.getElementById('appMain').scrollTop = 180;
+
+                const caseDetails = await generateAiGrievance(AppState.currentGame.aiCategory);
+                aiLoading.classList.add('hidden');
+
+                if (!caseDetails) {
+                    // Fallback to classic game if AI fails
+                    setGameMode('classic');
+                    ringTheBell();
+                    return;
+                }
+
+                // Render dynamic case from Gemini
+                caseStudyBox.classList.remove('hidden');
+                document.getElementById('caseBoxTypeLabel').innerHTML = '<i class="fa-solid fa-wand-magic-sparkles text-royalGold mr-1"></i> AI ฎีกาจำลองเรียลไทม์';
+                caseStudyTitle.textContent = caseDetails.caseTitle;
+                caseStudyDesc.textContent = caseDetails.caseDesc;
+
+                let html = '';
+                caseDetails.choices.forEach((choice, index) => {
+                    // Temporarily store choices in an active dynamic array on AppState to retrieve correctness during click
+                    AppState.currentGame.activeAiChoices = caseDetails.choices;
+                    html += `
+                        <button onclick="submitAiCaseChoice(${index})" class="w-full text-left bg-white hover:bg-royalGoldLight/30 border border-royalGold/30 rounded-xl p-3.5 text-xs text-thaiBlack font-formal leading-relaxed transition-all shadow-sm hover:shadow-md">
+                            <strong class="text-royalGoldDark mr-1 font-traditional text-sm">แนวทางที่ ${index + 1}:</strong> ${choice.text}
+                        </button>
+                    `;
+                });
+                caseStudyOptions.innerHTML = html;
+
+            } else {
+                // Traditional Static Case Mode
+                const randomCase = gameCases[Math.floor(Math.random() * gameCases.length)];
+                AppState.currentGame.activeCaseId = randomCase.id;
+
+                caseStudyBox.classList.remove('hidden');
+                document.getElementById('caseBoxTypeLabel').textContent = "ฎีกาความเดือดร้อนของราษฎร";
+                caseStudyTitle.textContent = randomCase.title;
+                caseStudyDesc.textContent = randomCase.desc;
+
+                let html = '';
+                randomCase.choices.forEach((choice, index) => {
+                    html += `
+                        <button onclick="submitCaseChoice(${index})" class="w-full text-left bg-white hover:bg-royalGoldLight/30 border border-royalGold/30 rounded-xl p-3.5 text-xs text-thaiBlack font-formal leading-relaxed transition-all shadow-sm hover:shadow-md">
+                            <strong class="text-royalGoldDark mr-1 font-traditional text-sm">ข้อที่ ${index + 1}:</strong> ${choice.text}
+                        </button>
+                    `;
+                });
+                caseStudyOptions.innerHTML = html;
+            }
+
+            document.getElementById('appMain').scrollTop = 120;
+        }
+
+        // Generate dynamic historical grievance using gemini-3-flash-preview structured output
+        async function generateAiGrievance(category) {
+            const systemPrompt = `คุณคือ 'ระบบจำลองประวัติศาสตร์ไทยและศาสตร์พระราชา' หน้าที่ของคุณคือการสร้างกรณีศึกษาหรือฎีกาจำลองจากปวงชนชาวไทยในยุคประวัติศาสตร์หรือปัญหาเกษตรกรรม/สิ่งแวดล้อมปัจจุบัน เพื่อให้ผู้เรียนได้คิดวิเคราะห์หาวิธีแก้ไขโดยประยุกต์ใช้หลัก 'ศาสตร์พระราชา' (เช่น โครงการแก้มลิง, แกล้งดิน, เศรษฐกิจพอเพียง, โครงการหลวง, ฝายชะลอน้ำ) ปัญหาต้องถูกสร้างตามหมวดหมู่ที่ระบุ และสร้างตัวเลือก 3 ตัวเลือก โดยมีเพียง 1 ตัวเลือกที่เหมาะสมที่สุดที่สะท้อนการแก้ปัญหาตามศาสตร์พระราชา และอีก 2 ตัวเลือกต้องเป็นทางเลือกที่ไม่ยั่งยืนหรือผิดหลักการแก้ไขปัญหาตามภูมิสังคม`;
+            
+            const categoryTrans = {
+                water: "การบริหารจัดการน้ำ (น้ำท่วม, น้ำแล้ง หรือน้ำเน่าเสีย)",
+                soil: "การปรับปรุงบำรุงผืนดิน (ดินเปรี้ยว, ดินเค็ม หรือดินจืดปลูกอะไรไม่ขึ้น)",
+                forest: "ป่าต้นน้ำและการตัดไม้ทำลายป่า (ไฟป่า, ไร่เลื่อนลอย หรือความแห้งแล้งบนเขาสูง)",
+                livelihood: "ชีวิตความเป็นอยู่และความยากจน (หนี้นอกระบบ, พืชผลตกต่ำ หรือไร้ที่ดินทำกิน)"
+            };
+
+            const userQuery = `โปรดสร้างคดีความเดือดร้อนประเภท: ${categoryTrans[category]} คดีต้องมีความสมจริง น่าสนใจ อิงเรื่องเล่าในประวัติศาสตร์ไทยหรือสังคมไทยแบบร่วมสมัย และสร้างตัวเลือกในการบำบัดทุกข์บำรุงสุข 3 ข้อ พร้อมผลลัพธ์ป้อนกลับ (Feedback)`;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            caseTitle: { type: "STRING" },
+                            caseDesc: { type: "STRING" },
+                            choices: {
+                                type: "ARRAY",
+                                items: {
+                                    type: "OBJECT",
+                                    properties: {
+                                        text: { type: "STRING" },
+                                        correct: { type: "BOOLEAN" },
+                                        feedback: { type: "STRING" }
+                                    },
+                                    required: ["text", "correct", "feedback"]
+                                }
+                            }
+                        },
+                        required: ["caseTitle", "caseDesc", "choices"]
+                    }
+                }
+            };
+
+            // Implement exponential backoff when making API calls to handle potential throttling
+            let delay = 1000;
+            for (let i = 0; i < 3; i++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    if (response.ok) {
+                        const result = await response.json();
+                        const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (jsonText) {
+                            return JSON.parse(jsonText);
+                        }
+                    } else if (response.status === 429) {
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2;
+                    }
+                } catch (e) {
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    delay *= 2;
+                }
+            }
+            return null;
+        }
+
+        // Submit Choice handlers
+        function submitCaseChoice(choiceIndex) {
+            const currentCase = gameCases.find(c => c.id === AppState.currentGame.activeCaseId);
+            if (!currentCase) return;
+
+            const chosen = currentCase.choices[choiceIndex];
+            renderGameFeedback(chosen.correct, chosen.feedback);
+        }
+
+        function submitAiCaseChoice(choiceIndex) {
+            const chosen = AppState.currentGame.activeAiChoices[choiceIndex];
+            if (!chosen) return;
+            renderGameFeedback(chosen.correct, chosen.feedback);
+        }
+
+        function renderGameFeedback(isCorrect, feedbackText) {
+            const caseStudyBox = document.getElementById('caseStudyBox');
+            const gameFeedback = document.getElementById('gameFeedback');
+            const feedbackIcon = document.getElementById('gameFeedbackIcon');
+            const feedbackTitle = document.getElementById('gameFeedbackTitle');
+            const feedbackDesc = document.getElementById('gameFeedbackDesc');
+
+            caseStudyBox.classList.add('hidden');
+            gameFeedback.classList.remove('hidden');
+
+            if (isCorrect) {
+                addStars(25);
+                feedbackIcon.className = "text-5xl text-royalGold";
+                feedbackIcon.innerHTML = '<i class="fa-solid fa-crown text-royalGoldDark"></i>';
+                feedbackTitle.textContent = "บำบัดทุกข์บำรุงสุขสำเร็จ!";
+                feedbackTitle.className = "text-xl font-bold font-traditional text-thaiBlack";
+                feedbackDesc.textContent = `${feedbackText} ราษฎรต่างพากันแซ่ซ้องสรรเสริญและกลับมามีความเป็นอยู่ที่ดีขึ้นอย่างยั่งยืน (+25 ดวงดาว)`;
+                
+                if (!AppState.progress.badges.gameBeaten) {
+                    AppState.progress.badges.gameBeaten = true;
+                    addStars(30);
+                    saveProgress();
+                }
+            } else {
+                feedbackIcon.className = "text-5xl text-neutral-800";
+                feedbackIcon.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i>';
+                feedbackTitle.textContent = "ยังไม่สามารถบรรเทาทุกข์ภัย...";
+                feedbackTitle.className = "text-xl font-bold font-traditional text-neutral-800";
+                feedbackDesc.textContent = feedbackText;
+            }
+        }
+
+        function resetGameBell() {
+            document.getElementById('caseStudyBox').classList.add('hidden');
+            document.getElementById('gameFeedback').classList.add('hidden');
+            document.getElementById('aiGameLoading').classList.add('hidden');
+        }
+
+        const quizBank = [
+            { q: "คำว่า 'กษัตริย์' ในภาษาสันสกฤตหมายถึงข้อใด?", a: ["ผู้ป้องกันหรือนักรบ", "ผู้เป็นหัวหน้าเผ่า", "ผู้รักษาธรรม", "เจ้าของแผ่นดิน"], c: 0 },
+            { q: "ความหมายตามตัวอักษรของคำว่า 'พระราชา' คือข้อใด?", a: ["ผู้เป็นเจ้าของแผ่นดิน", "ผู้เป็นหัวหน้าเผ่าและนักปกครอง", "ผู้พึ่งพาธรรมะ", "พระสัมมาสัมพุทธเจ้า"], c: 1 },
+            { q: "กษัตริย์ตามคติธรรมพุทธศาสนา ที่มีอำนาจยิ่งใหญ่เหนือมวลกษัตริย์ในสากลจักรวาลเรียกว่าอะไร?", a: ["จักรพรรดิราช", "เทวราช", "ธรรมราชา", "พระเจ้าแผ่นดิน"], c: 0 },
+            { q: "คำว่า 'ธรรมราชา' ได้รับอิทธิพลหลักมาจากศาสนาใด?", a: ["ศาสนาพราหมณ์-ฮินดู", "ศาสนาพุทธจากลังกาและอินเดีย", "ลัทธิขงจื๊อ", "ความเชื่อดั้งเดิมของไทย"], c: 1 },
+            { q: "คำเรียกใดที่แสดงการยอมรับพระราชสถานะขององค์กษัตริย์ว่าทรงเป็นองค์พระพุทธเจ้า?", a: ["จักรพรรดิราช", "พระเจ้าอยู่หัว", "ธรรมราชา", "ในหลวง"], c: 1 },
+            { q: "ในสังคมไทย 'พระเจ้าแผ่นดิน' มีสิทธิเด็ดขาดในกิจการใดโบราณ?", a: ["การประกาศแยกชาติ", "การพระราชทานกรรมสิทธิ์ที่ดินเพื่อการบำรุงรักษา", "การสั่งห้ามประกอบศาสนกิจ", "การทำสัญญาส่วนพระองค์นอกเขตแดน"], c: 1 },
+            { q: "สัญลักษณ์สีใดบนธงไตรรงค์ที่สื่อถึงสถาบันพระมหากษัตริย์?", a: ["สีแดง", "สีขาว", "สีน้ำเงิน", "สีเหลือง"], c: 2 },
+            { q: "ธงไตรรงค์ประกาศเริ่มใช้อย่างเป็นทางการในรัชสมัยใด?", a: ["รัชกาลที่ 4", "รัชกาลที่ 5", "รัชกาลที่ 6", "รัชกาลที่ 9"], c: 2 },
+            { q: "บนธงไตรรงค์ 'สีแดง' มีความหมายถึงสถาบันใด?", a: ["ชาติ", "ศาสนา", "พระมหากษัตริย์", "กองทัพ"], c: 0 },
+            { q: "ความสัมพันธ์แบบ 'บิดาปกครองบุตร' ของไทย ปรากฏเด่นชัดที่สุดในยุคใด?", a: ["สุโขทัย", "อยุธยา", "ธนบุรี", "รัตนโกสินทร์"], c: 0 },
+            { q: "การแขวนกระดิ่งหน้าวังเพื่อให้ราษฎรสั่นร้องทุกข์ เริ่มขึ้นในรัชสมัยใด?", a: ["พ่อขุนศรีอินทราทิตย์", "พ่อขุนรามคำแหงมหาราช", "พระมหาธรรมราชาที่ 1", "สมเด็จพระบรมไตรโลกนาถ"], c: 1 },
+            { q: "ความสัมพันธ์ระหว่างกษัตริย์กับราษฎรตามคติ 'ธรรมราชา' ตั้งอยู่บนพื้นฐานใด?", a: ["การสืบสายโลหิตจากเทพเจ้า", "พันธสัญญาทางหน้าที่และการปฏิบัติคุณธรรม", "ความกลัวในอำนาจทหาร", "การแต่งตั้งโดยต่างชาติ"], c: 1 },
+            { q: "หลักธรรมใดเป็นหัวใจสำคัญสูงสุดที่กษัตริย์ผู้ทรงธรรมต้องยึดมั่นปฏิบัติ?", a: ["ทศพิธราชธรรม 10", "สังคหวัตถุ 4", "อิทธิบาท 4", "เบญจศีล"], c: 0 },
+            { q: "ลัทธิ 'เทวราช' ที่เชื่อว่ากษัตริย์คือร่างอวตารของเทพเจ้า ได้รับอิทธิพลจากที่ใด?", a: ["เขมรและศาสนาพราหมณ์-ฮินดู", "จีนโบราณ", "พุทธศาสนานิกายมหายาน", "ชาติตะวันตก"], c: 0 },
+            { q: "ในคตินิยมชาวพุทธของไทย มีความเชื่อควบคู่ว่าพระมหากษัตริย์ทรงเป็นภาคหนึ่งของอะไร?", a: ["เทวทูต", "พระโพธิสัตว์", "เทวราช", "พญามังกร"], c: 1 },
+            { q: "ข้อใดคือคุณูปการข้อแรกของสถาบันพระมหากษัตริย์ต่อสังคมไทยตามตำรา?", a: ["การส่งทหารไปรบ", "การเป็นศูนย์รวมจิตใจของราษฎรทุกคน", "การกู้ยืมเงินต่างชาติ", "การเป็นประธานพรรคการเมือง"], c: 1 },
+            { q: "การมีอยู่ขององค์พระมหากษัตริย์ส่งผลดีเด่นชัดในเรื่องสัญลักษณ์ใดของสังคมไทย?", a: ["ความเป็นสากลทางภาษา", "ความสืบต่อเนื่องไม่ขาดสายของสังคมไทย", "ความเจริญทางสถาปัตยกรรม", "การเลือกตั้งพรรคการเมือง"], c: 1 },
+            { q: "ในแง่ของ 'อัครศาสนูปถัมภก' พระมหากษัตริย์ไทยทรงปฏิบัติอย่างไร?", a: ["อุปถัมภ์พุทธศาสนาเพียงอย่างเดียว", "ทรงอุปถัมภ์และบำรุงรักษาทุกศาสนาอย่างเสมอภาคเท่าเทียม", "จำกัดขอบเขตการเผยแพร่คริสต์ศาสนา", "ห้ามจัดกิจกรรมทางศาสนาอิสลาม"], c: 1 },
+            { q: "สถาบันพระมหากษัตริย์รวบรวมและใช้อำนาจใดเพื่อรักษาผลประโยชน์ของราษฎรส่วนรวม?", a: ["การสั่งประหารชีวิตโดยตรง", "การพระราชทานคำตักเตือน แนะนำ และยับยั้งกฎหมายที่ไม่เป็นธรรม", "การจัดเก็บภาษีส่วนพระองค์", "การสืบสวนคดีอาญา"], c: 1 },
+            { q: "เหตุการณ์ประวัติศาสตร์ใดที่ในหลวง ร.9 ทรงรับสั่งให้แกนนำคู่ขัดแย้งเข้าเฝ้าเพื่อยุติพฤษภาทมิฬ?", a: ["พ.ศ. 2516", "พ.ศ. 2519", "พ.ศ. 2535", "พ.ศ. 2549"], c: 2 },
+            { q: "เหตุการณ์ 'วันมหาวิปโยค' 14 ตุลาคม 2516 ได้รับการคลี่คลายลงด้วยพระบารมีของพระองค์ท่านผ่านบทบาทใด?", a: ["การประกาศสู้รบ", "การทำหน้าที่คนกลางไกล่เกลี่ยประนีประนอม", "การสั่งปิดมหาวิทยาลัย", "การลี้ภัยต่างประเทศ"], c: 1 },
+            { q: "ในฐานะ 'จอมทัพไทย' พระราชกรณียกิจหลักที่ทรงปฏิบัติเพื่อทหารตามแนวชายแดนคือข้อใด?", a: ["การจัดซื้ออาวุธยุทโธปกรณ์หนัก", "การส่งข้าวของเครื่องยังชีพและเสด็จเยี่ยมปลอบขวัญเพื่อให้เกิดกำลังใจ", "การควบคุมทหารประจำการด้วยพระองค์เอง", "การประกาศสงครามกับเพื่อนบ้าน"], c: 2 },
+            { q: "การเสด็จประพาสยุโรปของสมเด็จพระจุลจอมเกล้าเจ้าอยู่หัว รัชกาลที่ 5 มีวัตถุประสงค์เพื่ออะไร?", a: ["เพื่อซื้อเทคโนโลยีโทรศัพท์", "เพื่อสร้างภาพลักษณ์ศิวิไลซ์ เจรจารักษาเอกราชของชาติจากการคุกคามของตะวันตก", "เพื่อหาลู่ทางการย้ายถิ่นฐานของชนชั้นสูง", "เพื่อส่งเสริมการท่องเที่ยวทางเรือ"], c: 1 },
+            { q: "ตลอดรัชสมัยการครองราชย์ 70 ปีของ ร.9 ได้ก่อกำเนิดโครงการอันเนื่องมาจากพระราชดำริและพระบรมวงศ์รวมทั้งสิ้นกี่โครงการ?", a: ["1,000 โครงการ", "2,500 โครงการ", "4,596 โครงการ", "10,000 โครงการ"], c: 2 },
+            { q: "กษัตริย์พระองค์ใดที่ทรงริเริ่มการวางรากฐานระเบียบราชการ เลิกทาส และเลิกไพร่?", a: ["รัชกาลที่ 3", "รัชกาลที่ 4", "รัชกาลที่ 5", "รัชกาลที่ 6"], c: 2 },
+            { q: "สิทธิใดเป็นสิทธิที่ไม่ได้บัญญัติไว้เป็นลายลักษณ์อักษรในรัฐธรรมนูญ?", a: ["สิทธิในการยับยั้งพระราชบัญญัติ", "สิทธิที่จะตักเตือน, ทราบเรื่องราว, พระราชทานคำแนะนำ และการสนับสนุน", "สิทธิแต่งตั้งผู้สำเร็จราชการแผ่นดิน", "สิทธิประชามติแก้ไขรัฐธรรมนูญ"], c: 1 },
+            { q: "หากรัฐบาลทูลเกล้าฯ ร่างกฎหมายแล้วพระมหากษัตริย์ไม่ลงพระปรมาภิไธยภายในระยะเวลาปกติ สภามีอำนาจยืนยันด้วยคะแนนเสียงเท่าใด?", a: ["กึ่งหนึ่ง", "2 ใน 3 ของสมาชิกทั้งหมด", "3 ใน 4 ของสมาชิกทั้งหมด", "เป็นเอกฉันท์"], c: 1 },
+            { q: "การลงพระปรมาภิไธยคืนร่างพระราชบัญญัติมาพิจารณาใหม่ตามรัฐธรรมนูญปกติมีกำหนดเวลาภายในกี่วัน?", a: ["30 วัน", "60 วัน", "90 วัน", "120 วัน"], c: 2 },
+            { q: "รัฐธรรมนูญฉบับปีใดที่เคยบัญญัติให้พระมหากษัตริย์ทรงไว้ซึ่งพระราชอำนาจในการให้ประชาชนออกเสียงประชามติแก้รัฐธรรมนูญ?", a: ["พ.ศ. 2475 และ 2489", "พ.ศ. 2492 และ 2517", "พ.ศ. 2540", "พ.ศ. 2550"], c: 1 },
+            { q: "เมื่อพระมหากษัตริย์จะเสด็จไปต่างประเทศหรือไม่อาจบริหารพระราชภารกิจ ทรงมีอำนาจแต่งตั้งผู้ใด?", a: ["นายกรัฐมนตรี", "ประธานรัฐสภา", "ผู้สำเร็จราชการแทนพระองค์", "องคมนตรี"], c: 2 },
+            { q: "งานด้านพัฒนาสังคมของสถาบันพระมหากษัตริย์ เน้นย้ำเป้าหมายระยะยาวในเรื่องใด?", a: ["การนำสินค้าออกไปขายต่างประเทศ", "การพึ่งพาตนเองและการพัฒนาอย่างยั่งยืนตามภูมิสังคม", "การจัดหาพลังงานนิวเคลียร์", "การควบรวมกิจการขนาดใหญ่"], c: 1 },
+            { q: "ศูนย์ศึกษาการพัฒนาอันเนื่องมาจากพระราชดำริที่มีอยู่ทั่วประเทศ มุ่งทำหน้าที่เป็นต้นแบบในด้านใด?", a: ["การสอนวิชาวิทยาศาสตร์ขั้นสูง", "การแก้ไขปัญหาเกษตรกรรมตามหลักภูมิสังคมและการบริการเบ็ดเสร็จจุดเดียว", "การเป็นฐานทัพทหาร", "การทำสัญญาสิทธิบัตรอุตสาหกรรม"], c: 1 },
+            { q: "หลักการทรงงานลำดับแรกสุดใน 23 ข้อของในหลวง รัชกาลที่ 9คือข้อใด?", a: ["ระเบิดจากข้างใน", "ศึกษาข้อมูลอย่างเป็นระบบ", "แก้ปัญหาที่จุดเล็ก", "ไม่ติดตำรา"], c: 1 },
+            { q: "คำว่า 'ระเบิดจากข้างใน' ตามหลักการทรงงานมีความหมายตรงกับข้อใด?", a: ["การใช้วัตถุระเบิดในการทำคลองชลประทาน", "การสร้างความเข้มแข็งให้คนในชุมชนมีความพร้อมก่อนจะนำความเจริญภายนอกเข้าไป", "การผ่าตัดศัลยกรรมภายในร่างกาย", "การเก็บรวบรวมอาวุธภายในประเทศ"], c: 1 },
+            { q: "หลักการทรงงานที่ว่า 'คิด Macro เริ่ม Micro' สอดคล้องกับหัวข้อใด?", a: ["ทำตามลำดับขั้น", "แก้ปัญหาที่จุดเล็ก", "ใช้อธรรมปราบอธรรม", "ขาดทุนคือกำไร"], c: 1 },
+            { q: "ข้อใดสอดคล้องกับคติพจน์ 'ขาดทุนคือกำไร' (Our loss is our gain)?", a: ["การทำธุรกิจส่งออกแล้วขาดทุนทรัพย์สิน", "การเสียสละประโยชน์ส่วนตนเพื่อให้ราษฎรมีความอยู่ดีกินดีอันเป็นกำไรที่แท้จริง", "การเลิกกิจการค้าขายเพื่อรับเงินช่วยเหลือ", "การบริหารราชการแผ่นดินขาดดุล"], c: 1 },
+            { q: "บริษัทสยามไบโอไซเอนซ์จัดตั้งขึ้นในปี พ.ศ. 2552 โดยพระราชปณิธานของกษัตริย์พระองค์ใด?", a: ["รัชกาลที่ 5", "รัชกาลที่ 7", "รัชกาลที่ 9", "รัชกาลที่ 10"], c: 2 },
+            { q: "หลักปรัชญาเศรษฐกิจพอเพียงได้รับการบรรจุไว้ในเวทีโลกโดยองค์กรระดับนานาชาติใดในฐานะแนวทางพัฒนาที่ยั่งยืน?", a: ["UNESCO", "WHO", "องค์การสหประชาชาติ (UN)", "WTO"], c: 2 },
+            { q: "โครงการแก้มลิงริเริ่มขึ้นจากแนวคิดเพื่อแก้ไขปัญหาวิกฤตการณ์ทางธรรมชาติประเภทใด?", a: ["แผ่นดินไหว", "ไฟป่าและฝุ่นหมอกควัน", "อุทกภัยและน้ำท่วมขัง", "สึนามิ"], c: 2 },
+            { q: "โครงการ 'แกล้งดิน' มีเป้าหมายในการแก้ปัญหาคุณภาพดินลักษณะใด?", a: ["ดินแห้งผงทรายไม่มีธาตุอาหาร", "ดินเป็นกรดจัดหรือดินเปรี้ยว", "ดินปนเปื้อนสารเคมีอุตสาหกรรม", "ดินชะล้างถล่มบนเขาสูง"], c: 1 },
+            { q: "คำสอน 'รู้ รัก สามัคคี' คำว่า 'รู้' มีความหมายตรงกับข้อใด?", a: ["รู้ว่าเพื่อนชอบสิ่งใด", "รู้ถึงปัจจัยรอบด้านและแนวทางแก้ไขปัญหานั้นๆ อย่างแท้จริง", "รู้กฎหมายบ้านเมืองทั้งหมด", "รู้ว่าจะขายสินค้าชิ้นใดให้ได้กำไรสูงสุด"], c: 1 },
+            { q: "ในระบอบประชาธิปไตยอันมีพระมหากษัตริย์ทรงเป็นประมุข รัฐธรรมนูญเกือบทุกฉบับสะท้อนเจตนารมณ์ร่วมกันในเรื่องใด?", a: ["การเปลี่ยนผ่านรูปแบบการปกครองสม่ำเสมอ", "การคงอยู่เคียงคู่ของสถาบันหลักร่วมกับรัฐธรรมนูญและราษฎรตลอดไป", "การจัดตั้งเขตเศรษฐกิจพิเศษ", "การเลือกสมาชิกสภาร่างธรรมนูญชุดใหม่ทุกปี"], c: 2 },
+            { q: "พระราชพิธีจรดพระนังคัลแรกนาขวัญมีความสำคัญต่อราษฎรกลุ่มใดมากที่สุด?", a: ["ข้าราชการครู", "ทหารและตำรวจ", "เกษตรกรและชาวนา", "ผู้ประกอบการส่งออก"], c: 2 },
+            { q: "ความหมายของ 'ภูมิสังคม' ในหลักการทรงงาน ประกอบด้วยปัจจัยหลักด้านใดบ้าง?", a: ["ภูมิประเทศ และสังคมวิทยาวัฒนธรรมนิสัยใจคอท้องถิ่น", "ระดับรายได้และจํานวนบุคลากรการศึกษา", "พื้นที่ป่าไม้และแผนที่ทางทหาร", "นโยบายการค้าระหว่างประเทศ"], c: 0 },
+            { q: "แนวทางข้อใดที่ราษฎรสามารถร่วมแสดงการเทิดทูนและสืบสานศาสตร์พระราชาได้ดีที่สุดในฐานะเยาวชนนักศึกษา?", a: ["การนำงบประมาณหลวงมาจัดกิจกรรมหรูหรา", "การศึกษา เรียนรู้ น้อมนำหลักปรัชญาเศรษฐกิจพอเพียงและการทรงงานมาใช้ชีวิตจริง", "การลงชื่อสนับสนุนพรรคการเมืองพรรคใดพรรคหนึ่ง", "การระงับการเรียนการสอนทั้งหมดเพื่อไปเดินขบวน"], c: 1 },
+            { q: "ข้อใดเป็นตัวอย่างของการใช้หลักการ 'ธรรมชาติช่วยธรรมชาติ' ของศาสตร์พระราชา?", a: ["การฉีดน้ำยาฆ่าสารเคมีทางอากาศ", "การปลูกป่าโดยไม่ต้องปลูก ปล่อยให้ระบบนิเวศฟื้นฟูด้วยตนเองตามธรรมชาติ", "การนำปูนซีเมนต์ไปถมอ่างเก็บน้ำ", "การติดตั้งพัดลมไอน้ำขนาดยักษ์ในป่าดิบชื้น"], c: 1 },
+            { q: "โครงการหลวงก่อตั้งขึ้นเพื่อสนับสนุนอาชีพแก่ราษฎรกลุ่มใด?", a: ["ชาวไทยภูเขา", "ชาวประมงแถบชายทะเลภาคใต้", "กลุ่มแรงงานสิ่งทอในเมืองใหญ่", "คนชราในสถานสงเคราะห์"], c: 0 },
+            { q: "บริษัท สยามไบโอไซเอนซ์ ดำเนินนโยบายการผลิตวัคซีนโควิด-19 ในช่วงระบาดใหญ่ภายใต้นโยบายใด?", a: ["เน้นสร้างกำไรสูงสุดส่งออกสหรัฐฯ", "ไม่เน้นผลกำไรและไม่ขาดทุน (No Profit, No Loss)", "จำหน่ายให้ผู้มีสิทธิเข้าคลังรัฐบาลเท่านั้น", "ให้เฉพาะคนในเมืองใหญ่ฉีดฟรีก่อน"], c: 1 },
+            { q: "ตามคำสอนของพระองค์ท่าน ผู้ที่มีความสุจริตและบริสุทธิ์ใจ แม้มีความรู้น้อย สามารถสร้างประโยชน์ได้อย่างไรเมื่อเทียบกับผู้มีความรู้มากแต่ไร้ความสุจริต?", a: ["สามารถสร้างประโยชน์ได้มากกว่า", "สามารถสร้างประโยชน์ได้เท่ากัน", "ไม่สามารถสร้างประโยชน์ใดๆ ได้เลย", "ก่อความวุ่นวายมากกว่า"], c: 0 },
+            { q: "การมีส่วนร่วมถวายฎีกาหน้าประตูวังในสมัยสุโขทัย สะท้อนลักษณะความเชื่อใดในอดีต?", a: ["ความกลัวในบทลงโทษทางอาญา", "สิทธิเสรีภาพและความใกล้ชิดระหว่างกษัตริย์กับประชาชนเสมือนพ่อกับลูก", "การคัดเลือกตัวแทนพรรคเพื่อเจรจา", "อำนาจรัฐสภาเหนือประชาชน"], c: 1 }
+        ];
+
+        function startQuizNow() {
+            const shuffled = [...quizBank].sort(() => 0.5 - Math.random());
+            AppState.currentQuiz.questions = shuffled.slice(0, 20);
+            AppState.currentQuiz.currentIndex = 0;
+            AppState.currentQuiz.score = 0;
+            AppState.currentQuiz.answers = [];
+            AppState.currentQuiz.active = true;
+            AppState.currentQuiz.isAiQuiz = false;
+
+            document.getElementById('quizStartScreen').classList.add('hidden');
+            document.getElementById('quizPlayPanel').classList.remove('hidden');
+            document.getElementById('quizResultPanel').classList.add('hidden');
+            document.getElementById('quizLoadingState').classList.add('hidden');
+            document.getElementById('quizQuestionContainer').classList.remove('hidden');
+            
+            document.getElementById('quizModeLabel').textContent = "ปกติ";
+            document.getElementById('totalQuestionsLimit').textContent = "20";
+
+            renderQuizQuestion();
+        }
+
+        function showAiQuizGeneratorSetup() {
+            const setupArea = document.getElementById('aiQuizSetupArea');
+            setupArea.classList.toggle('hidden');
+        }
+
+        // Use gemini-3-flash-preview to generate structured JSON quiz dynamically
+        async function generateCustomAiQuiz() {
+            const topicInput = document.getElementById('aiQuizTopicInput');
+            const topic = topicInput.value.trim();
+            if (!topic) return;
+
+            document.getElementById('quizStartScreen').classList.add('hidden');
+            document.getElementById('quizPlayPanel').classList.remove('hidden');
+            document.getElementById('quizLoadingState').classList.remove('hidden');
+            document.getElementById('quizQuestionContainer').classList.add('hidden');
+            document.getElementById('quizResultPanel').classList.add('hidden');
+
+            const systemPrompt = `คุณคือระบบสร้างข้อสอบประวัติศาสตร์ไทยและศาสตร์พระราชาคุณภาพสูง คุณต้องสร้างข้อสอบปรนัยจำนวน 5 ข้อ เกี่ยวกับหัวข้อที่ผู้ใช้ระบุ คืนค่ามาเป็นรูปแบบโครงสร้างข้อมูล JSON เสมอตาม Schema ที่ระบุ โดยแต่ละข้อต้องมีตัวเลือก 4 ข้อ และเฉลยตัวเลือกที่ถูกต้องด้วยดัชนี (0, 1, 2, 3)`;
+            const userQuery = `โปรดสร้างข้อสอบแบบปรนัยจำนวน 5 ข้อ เรื่อง: "${topic}" ที่มีความท้าทาย น่ารู้ และถูกต้องตามวิชาการ`;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                q: { type: "STRING", description: "คำถามข้อสอบ" },
+                                a: {
+                                    type: "ARRAY",
+                                    items: { type: "STRING" },
+                                    description: "ตัวเลือกคำตอบ 4 ตัวเลือก"
+                                },
+                                c: { type: "INTEGER", description: "ดัชนีตัวเลือกที่ถูกต้องตั้งแต่ 0 ถึง 3" }
+                            },
+                            required: ["q", "a", "c"]
+                        }
+                    }
+                }
+            };
+
+            // Implement exponential backoff for custom quiz generating calls
+            let delay = 1000;
+            for (let attempt = 0; attempt < 3; attempt++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+                    
+                    if (response.ok) {
+                        const result = await response.json();
+                        const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (jsonText) {
+                            const generatedQuestions = JSON.parse(jsonText);
+                            if (generatedQuestions && generatedQuestions.length > 0) {
+                                AppState.currentQuiz.questions = generatedQuestions;
+                                AppState.currentQuiz.currentIndex = 0;
+                                AppState.currentQuiz.score = 0;
+                                AppState.currentQuiz.answers = [];
+                                AppState.currentQuiz.active = true;
+                                AppState.currentQuiz.isAiQuiz = true;
+
+                                document.getElementById('quizLoadingState').classList.add('hidden');
+                                document.getElementById('quizQuestionContainer').classList.remove('hidden');
+                                document.getElementById('quizModeLabel').textContent = "AI พิเศษ";
+                                document.getElementById('totalQuestionsLimit').textContent = generatedQuestions.length.toString();
+
+                                renderQuizQuestion();
+                                return;
+                            }
+                        }
+                    } else if (response.status === 429) {
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2;
+                    }
+                } catch(e) {
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    delay *= 2;
+                }
+            }
+
+            // Fallback in case of API failure
+            startQuizNow();
+        }
+
+        function renderQuizQuestion() {
+            const qIndex = AppState.currentQuiz.currentIndex;
+            const qData = AppState.currentQuiz.questions[qIndex];
+            if (!qData) return;
+
+            document.getElementById('currentQuestionNumber').textContent = qIndex + 1;
+            document.getElementById('liveScore').textContent = `${AppState.currentQuiz.score}/${qIndex}`;
+            document.getElementById('quizQuestionText').textContent = qData.q;
+
+            const answersBox = document.getElementById('quizAnswersBox');
+            let html = '';
+            qData.a.forEach((ans, idx) => {
+                html += `
+                    <button onclick="selectQuizAnswer(${idx})" class="w-full text-left bg-white hover:bg-royalGoldLight border border-royalGold/30 rounded-2xl p-4 text-xs font-formal text-thaiBlack transition-all active:scale-95 duration-150 shadow-sm hover:shadow-md flex items-center">
+                        <span class="w-6 h-6 inline-flex items-center justify-center bg-royalGoldLight border border-royalGold/30 rounded-full text-xs font-bold text-royalGoldDark mr-2.5">${String.fromCharCode(65 + idx)}</span>
+                        <span>${ans}</span>
+                    </button>
+                `;
+            });
+            answersBox.innerHTML = html;
+        }
+
+        function selectQuizAnswer(selectedIdx) {
+            const qIndex = AppState.currentQuiz.currentIndex;
+            const qData = AppState.currentQuiz.questions[qIndex];
+            const totalQuestions = AppState.currentQuiz.questions.length;
+
+            const isCorrect = (selectedIdx === qData.c);
+            if (isCorrect) {
+                AppState.currentQuiz.score++;
+            }
+
+            AppState.currentQuiz.answers.push({
+                question: qData.q,
+                selected: selectedIdx,
+                correct: qData.c,
+                wasCorrect: isCorrect
+            });
+
+            if (qIndex + 1 < totalQuestions) {
+                AppState.currentQuiz.currentIndex++;
+                renderQuizQuestion();
+            } else {
+                finishQuizSession();
+            }
+        }
+
+        function finishQuizSession() {
+            AppState.currentQuiz.active = false;
+            const finalScore = AppState.currentQuiz.score;
+            const totalQuestions = AppState.currentQuiz.questions.length;
+            const targetRatio = AppState.currentQuiz.isAiQuiz ? 0.6 : 0.75; // 3/5 for AI, 15/20 for Static
+            const passed = (finalScore / totalQuestions) >= targetRatio;
+
+            document.getElementById('quizPlayPanel').classList.add('hidden');
+            document.getElementById('quizResultPanel').classList.remove('hidden');
+
+            const graphic = document.getElementById('resultStatusGraphic');
+            const title = document.getElementById('resultTitle');
+            const desc = document.getElementById('resultDesc');
+            const finalCorrect = document.getElementById('finalCorrectScore');
+            const finalPerc = document.getElementById('finalPercentage');
+            const actionArea = document.getElementById('quizActionArea');
+
+            finalCorrect.textContent = `${finalScore}/${totalQuestions}`;
+            finalPerc.textContent = `${Math.round((finalScore / totalQuestions) * 100)}%`;
+
+            if (passed) {
+                graphic.className = "relative inline-block text-royalGold text-7xl animate-bounce";
+                graphic.innerHTML = '<i class="fa-solid fa-trophy text-royalGoldDark"></i>';
+                title.textContent = "ยินดีด้วย คุณผ่านการทดสอบ!";
+                title.className = "text-2xl font-bold font-traditional text-thaiBlack";
+                desc.textContent = "คุณมีความรู้ ความเข้าใจคุณูปการของสถาบันพระมหากษัตริย์ในสังคมไทยระดับดีเลิศ";
+                
+                addStars(AppState.currentQuiz.isAiQuiz ? 40 : 100);
+
+                if (!AppState.currentQuiz.isAiQuiz && finalScore > AppState.progress.highScore) {
+                    AppState.progress.highScore = finalScore;
+                }
+
+                if (!AppState.progress.badges.quizPassed) {
+                    AppState.progress.badges.quizPassed = true;
+                }
+                if (!AppState.currentQuiz.isAiQuiz && finalScore === 20 && !AppState.progress.badges.perfectScore) {
+                    AppState.progress.badges.perfectScore = true;
+                    addStars(200);
+                }
+                saveProgress();
+
+                actionArea.innerHTML = `
+                    <div class="space-y-3">
+                        <p class="text-xs text-royalGoldDark font-bold font-traditional uppercase tracking-widest"><i class="fa-solid fa-sparkles mr-1"></i>เกียรติยศสูงสุดสำเร็จ</p>
+                        <button onclick="resetQuizView()" class="w-full max-w-xs bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional py-3 rounded-2xl hover:bg-royalGold hover:text-white transition-all text-sm">
+                            เสร็จสิ้นแบบทดสอบ
+                        </button>
+                    </div>
+                `;
+            } else {
+                graphic.className = "relative inline-block text-neutral-800 text-7xl";
+                graphic.innerHTML = '<i class="fa-solid fa-circle-xmark"></i>';
+                title.textContent = "ยังไม่ผ่านเกณฑ์การทดสอบ";
+                title.className = "text-2xl font-bold font-traditional text-neutral-800";
+                desc.textContent = "คุณต้องการโอกาสฝึกฝนตัวเองเพิ่มเติมท้าทายใหม่อีกครั้งเพื่อเกียรติบัตรหรือไม่";
+
+                actionArea.innerHTML = `
+                    <button onclick="resetQuizView()" class="w-full max-w-xs bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional py-3 rounded-2xl hover:bg-royalGold hover:text-white transition-all text-sm">
+                        กลับหน้าฝึกฝนความรู้
+                    </button>
+                `;
+            }
+            document.getElementById('appMain').scrollTop = 0;
+        }
+
+        function resetQuizView() {
+            document.getElementById('quizResultPanel').classList.add('hidden');
+            document.getElementById('quizStartScreen').classList.remove('hidden');
+        }
+
+        // AI Chatbot Functionality (Tutor)
+        async function sendTutorMessage() {
+            const input = document.getElementById('aiTutorInput');
+            const messageText = input.value.trim();
+            if (!messageText) return;
+
+            // Render user message instantly
+            input.value = "";
+            renderChatMessage(messageText, "user");
+
+            // Scroll chat to the bottom
+            const chatWindow = document.getElementById('chatHistoryWindow');
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Render typing loader
+            const typingId = "ai-typing-indicator";
+            const typingHtml = `
+                <div id="${typingId}" class="bg-white border border-royalGold/30 rounded-2xl p-3.5 text-xs leading-relaxed max-w-[85%] self-start space-y-1 text-thaiBlack font-formal shadow-sm">
+                    <span class="font-bold text-royalGoldDark flex items-center gap-1 font-traditional text-sm">
+                        <i class="fa-solid fa-robot animate-bounce mr-1"></i> กำลังวิเคราะห์ข้อมูลประวัติศาสตร์...
+                    </span>
+                </div>
+            `;
+            chatWindow.insertAdjacentHTML('beforeend', typingHtml);
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+
+            // Call Gemini API using exponential backoff
+            const reply = await getGeminiTutorReply(messageText);
+            
+            // Remove typing loader
+            const loader = document.getElementById(typingId);
+            if (loader) loader.remove();
+
+            // Render AI Reply
+            renderChatMessage(reply, "bot");
+            chatWindow.scrollTop = chatWindow.scrollHeight;
+        }
+
+        // Facilitate rapid suggested queries
+        function sendQuickPrompt(promptText) {
+            document.getElementById('aiTutorInput').value = promptText;
+            sendTutorMessage();
+        }
+
+        function renderChatMessage(text, role) {
+            const chatWindow = document.getElementById('chatHistoryWindow');
+            let messageHtml = '';
+
+            if (role === "user") {
+                messageHtml = `
+                    <div class="bg-royalGoldLight/30 border border-royalGold/40 rounded-2xl p-3.5 text-xs leading-relaxed max-w-[85%] self-end space-y-1 text-thaiBlack font-formal shadow-sm">
+                        <p class="font-bold text-royalGoldDark text-right font-traditional text-sm">คุณ:</p>
+                        <p class="text-right text-thaiBlack">${text}</p>
+                    </div>
+                `;
+            } else {
+                const messageId = "msg-" + Date.now();
+                messageHtml = `
+                    <div class="bg-white border border-royalGold/30 rounded-2xl p-3.5 text-xs leading-relaxed max-w-[85%] self-start space-y-1.5 text-thaiBlack font-formal shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 left-0 right-0 h-1 flag-accent-bar"></div>
+                        <div class="flex justify-between items-center mt-1">
+                            <p class="font-bold text-royalGoldDark flex items-center gap-1 font-traditional text-sm">
+                                <i class="fa-solid fa-robot"></i> ติวเตอร์ศาสตร์พระราชา:
+                            </p>
+                            <button onclick="speakText(this, \`${text.replace(/`/g, '\\`').replace(/"/g, '\\"')}\`)" class="text-[10px] text-royalGoldDark hover:text-[#111111] px-1.5 py-0.5 rounded border border-royalGold/20 bg-royalGoldLight/20 transition-all active:scale-90 flex items-center gap-1 font-traditional">
+                                <i class="fa-solid fa-volume-high"></i> 🔊 ฟังพากย์
+                            </button>
+                        </div>
+                        <div class="prose prose-xs leading-relaxed text-thaiBlack font-formal">${formatParagraphs(text)}</div>
+                    </div>
+                `;
+            }
+            chatWindow.insertAdjacentHTML('beforeend', messageHtml);
+        }
+
+        // Help render line breaks gracefully
+        function formatParagraphs(text) {
+            return text.split('\n').map(p => p.trim() ? `<p class="mb-1.5">${p}</p>` : '').join('');
+        }
+
+        // Query Gemini Text with Exponential Backoff
+        async function getGeminiTutorReply(userMsg) {
+            const systemInstruction = "คุณคือ 'ติวเตอร์ศาสตร์พระราชาและสถาบันกษัตริย์' หน้าที่ของคุณคือการตอบคำถามให้ข้อมูลความรู้เกี่ยวกับความเป็นมาประวัติศาสตร์ไทย, ความสำคัญของสถาบันพระมหากษัตริย์ในสังคมไทย, ทศพิธราชธรรม, และโครงการอันเนื่องมาจากพระราชดำริทุกประเภท (เช่น แกล้งดิน แก้มลิง ฝนหลวง ปรัชญาเศรษฐกิจพอเพียง) อธิบายด้วยความสุภาพ นอบน้อม ใช้ภาษาไทยที่สละสลวยถูกต้อง เหมาะสม และเข้าใจง่าย กระชับ เหมาะกับการอ่านบนหน้าจอสมาร์ทโฟน";
+            
+            // Build temporary memory for context
+            AppState.tutorChatHistory.push({ role: "user", parts: [{ text: userMsg }] });
+            if (AppState.tutorChatHistory.length > 10) {
+                AppState.tutorChatHistory.shift(); // Keep context window under 10 turns
+            }
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: AppState.tutorChatHistory,
+                systemInstruction: {
+                    parts: [{ text: systemInstruction }]
+                }
+            };
+
+            let delay = 1000;
+            const maxRetries = 3;
+
+            for (let attempt = 0; attempt < maxRetries; attempt++) {
+                try {
+                    const response = await fetch(apiUrl, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(payload)
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        const responseText = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+                        if (responseText) {
+                            AppState.tutorChatHistory.push({ role: "model", parts: [{ text: responseText }] });
+                            return responseText;
+                        }
+                    } else if (response.status === 429) {
+                        // Throttling error - engage exponential backoff
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        delay *= 2;
+                    } else {
+                        throw new Error(`HTTP error code: ${response.status}`);
+                    }
+                } catch (e) {
+                    if (attempt === maxRetries - 1) {
+                        return "ขอประทานอภัยอย่างยิ่งครับ ระบบการสืบค้นปัญญาประดิษฐ์เกิดการขัดข้องทางเทคนิคชั่วคราว กรุณาลองสอบถามใหม่อีกครั้งในภายหลังนะครับ";
+                    }
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    delay *= 2;
+                }
+            }
+            return "ไม่สามารถเชื่อมต่อติวเตอร์ได้ในขณะนี้";
+        }
+
+        // Call gemini-2.5-flash-preview-tts model to synthesize raw PCM and construct WAV blob
+        async function speakText(btn, rawText) {
+            // Put btn in loading state
+            const origHTML = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = `<i class="fa-solid fa-spinner animate-spin"></i> กำลังพากย์...`;
+
+            // Clean up text formatting to avoid strange TTS artifacts
+            const cleanText = rawText.replace(/[*#_\-`]/g, '').trim();
+            const formattedPrompt = `พูดภาษาไทยข้อความนี้ด้วยน้ำเสียงสุภาพ นุ่มนวล ชัดเจน และน่าฟัง: ${cleanText}`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: formattedPrompt }]
+                }],
+                generationConfig: {
+                    responseModalities: ["AUDIO"],
+                    speechConfig: {
+                        voiceConfig: {
+                            prebuiltVoiceConfig: { voiceName: "Sadachbia" } // Lively friendly voice
+                        }
+                    }
+                }
+            };
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-tts:generateContent?key=${apiKey}`;
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error("TTS fetch failure");
+
+                const result = await response.json();
+                const part = result?.candidates?.[0]?.content?.parts?.[0];
+                const base64Audio = part?.inlineData?.data;
+                const mimeType = part?.inlineData?.mimeType;
+
+                if (base64Audio && mimeType && mimeType.startsWith("audio/")) {
+                    const sampleRateMatch = mimeType.match(/rate=(\d+)/);
+                    const sampleRate = sampleRateMatch ? parseInt(sampleRateMatch[1], 10) : 24000;
+
+                    const pcmData = base64ToArrayBuffer(base64Audio);
+                    const pcm16 = new Int16Array(pcmData);
+                    const wavBlob = pcmToWav(pcm16, sampleRate);
+                    const audioUrl = URL.createObjectURL(wavBlob);
+
+                    // Play WAV file
+                    const audio = new Audio(audioUrl);
+                    audio.play();
+
+                    btn.innerHTML = `<i class="fa-solid fa-circle-play text-royalGoldDark animate-pulse"></i> กำลังพูด...`;
+                    audio.onended = () => {
+                        btn.disabled = false;
+                        btn.innerHTML = origHTML;
+                    };
+                } else {
+                    throw new Error("Invalid audio response");
+                }
+            } catch (e) {
+                console.error("Gemini TTS engine error", e);
+                btn.disabled = false;
+                btn.innerHTML = `<i class="fa-solid fa-times text-red-500"></i> ล้มเหลว`;
+                setTimeout(() => { btn.innerHTML = origHTML; }, 2000);
+            }
+        }
+
+        function base64ToArrayBuffer(base64) {
+            const binaryString = window.atob(base64);
+            const len = binaryString.length;
+            const bytes = new Uint8Array(len);
+            for (let i = 0; i < len; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+            }
+            return bytes.buffer;
+        }
+
+        function pcmToWav(pcm16Array, sampleRate) {
+            const buffer = new ArrayBuffer(44 + pcm16Array.byteLength);
+            const view = new DataView(buffer);
+
+            // RIFF chunk identifier
+            writeString(view, 0, 'RIFF');
+            // file length (total pcm size + 36 bytes)
+            view.setUint32(4, 36 + pcm16Array.byteLength, true);
+            // RIFF type
+            writeString(view, 8, 'WAVE');
+            // format chunk identifier
+            writeString(view, 12, 'fmt ');
+            // format chunk length
+            view.setUint32(16, 16, true);
+            // sample format (1 = raw signed PCM)
+            view.setUint16(20, 1, true);
+            // channel count (1 = mono)
+            view.setUint16(22, 1, true);
+            // sample rate
+            view.setUint32(24, sampleRate, true);
+            // byte rate (sample rate * block align)
+            view.setUint32(28, sampleRate * 2, true);
+            // block align (channel count * bytes per sample)
+            view.setUint16(32, 2, true);
+            // bits per sample (16 bit pcm)
+            view.setUint16(34, 16, true);
+            // data chunk identifier
+            writeString(view, 36, 'data');
+            // data chunk length
+            view.setUint32(40, pcm16Array.byteLength, true);
+
+            // Write PCM audio samples
+            const pcmView = new DataView(pcm16Array.buffer);
+            for (let i = 0; i < pcm16Array.length; i++) {
+                view.setInt16(44 + i * 2, pcmView.getInt16(i * 2, true), true);
+            }
+
+            return new Blob([view], { type: 'audio/wav' });
+        }
+
+        function writeString(view, offset, string) {
+            for (let i = 0; i < string.length; i++) {
+                view.setUint8(offset + i, string.charCodeAt(i));
+            }
+        }
+
+        // Call Imagen 4.0 generate image API
+        async function generateIllustration() {
+            const promptInput = document.getElementById('aiDrawPromptInput');
+            const promptText = promptInput.value.trim();
+            if (!promptText) return;
+
+            const placeholder = document.getElementById('drawDefaultPlaceholder');
+            const loader = document.getElementById('drawLoadingIndicator');
+            const container = document.getElementById('drawImageContainer');
+            const imgElement = document.getElementById('renderedAiImage');
+
+            placeholder.classList.add('hidden');
+            container.classList.add('hidden');
+            loader.classList.remove('hidden');
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/imagen-4.0-generate-001:predict?key=${apiKey}`;
+
+            // Augment prompt to ensure aesthetic compatibility with Thai hand-drawn or presentation style
+            const refinedPrompt = `Beautiful artistic illustration, watercolor pencil drawing style representing: ${promptText}, warm lighting, elegant design, highly detailed, no text`;
+
+            const payload = {
+                instances: { prompt: refinedPrompt },
+                parameters: { "sampleCount": 1 }
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error("Image Generation Failed");
+
+                const result = await response.json();
+                const base64Image = result?.predictions?.[0]?.bytesBase64Encoded;
+
+                if (base64Image) {
+                    const dataUrl = `data:image/png;base64,${base64Image}`;
+                    imgElement.src = dataUrl;
+                    
+                    loader.classList.add('hidden');
+                    container.classList.remove('hidden');
+
+                    // Save the temporary URL context
+                    AppState.currentGame.latestGeneratedBase64 = dataUrl;
+                } else {
+                    throw new Error("No image predicted");
+                }
+            } catch(e) {
+                console.error("Imagen server error", e);
+                loader.classList.add('hidden');
+                placeholder.classList.remove('hidden');
+            }
+        }
+
+        function saveImageToScrapbook() {
+            const dataUrl = AppState.currentGame.latestGeneratedBase64;
+            if (!dataUrl) return;
+
+            if (!AppState.savedImages.includes(dataUrl)) {
+                AppState.savedImages.push(dataUrl);
+                addStars(50); // Reward for visual scrapbook creation
+                saveProgress();
+                
+                // Switch button look to confirm success
+                const btn = document.querySelector("#drawImageContainer button");
+                if (btn) {
+                    btn.innerHTML = `<i class="fa-solid fa-circle-check text-green-600"></i> บันทึกแล้ว! (+50 ดาว)`;
+                    btn.disabled = true;
+                }
+            }
+        }
+
+        // Custom Sustainable Planner logic powered by Gemini API
+        async function generateRoyalPlan() {
+            const location = document.getElementById('planLocation').value.trim();
+            const terrain = document.getElementById('planTerrain').value;
+            const problem = document.getElementById('planProblem').value.trim();
+
+            if (!location || !problem) {
+                const notice = document.createElement('div');
+                notice.className = "bg-red-50 text-red-700 text-xs p-3 rounded-xl border border-red-300 font-formal text-center";
+                notice.textContent = "กรุณากรอกข้อมูลสถานที่และปัญหาที่ต้องการแก้ไขก่อนดำเนินการครับ";
+                document.getElementById('aiTutorPlanPanel').prepend(notice);
+                setTimeout(() => notice.remove(), 4000);
+                return;
+            }
+
+            const loader = document.getElementById('planLoadingState');
+            const outputBox = document.getElementById('planOutputBox');
+            
+            loader.classList.remove('hidden');
+            outputBox.classList.add('hidden');
+
+            const systemPrompt = `คุณคือ 'ผู้เชี่ยวชาญด้านศาสตร์พระราชาและวิศวกรพัฒนาสังคมตามแนวพระราชดำริ' หน้าที่ของคุณคือการประเมินสภาพแวดล้อมเชิงภูมิสังคม (Geosocial Landscape) ของราษฎรในท้องถิ่น และนำเสนอแผนการดำเนินโครงการจัดแจงพัฒนาอย่างยั่งยืนโดยประยุกต์ใช้แนวทางศาสตร์พระราชา เช่น การแก้ไขอุทกภัย ดินเปรี้ยว ดินเค็ม โครงการหลวง ปรับสภาพพื้นที่ เกษตรทฤษฎีใหม่ พัฒนาป่าไม้ หรือโครงการพัฒนาท้องถิ่นอเนกประสงค์
+            คุณต้องส่งกลับผลลัพธ์เป็นโครงสร้าง JSON เสมอตาม Schema ที่กำหนด โดย imagePrompt จะต้องเป็นคำอธิบายภาพที่ละเอียด ละเมียดละไม สำหรับใช้วาดรูปต่อใน AI Drawing Generator (เช่น ภาพลายเส้นสีน้ำของฝายชะลอน้ำในหุบเขาภาคเหนือที่เขียวขจี) และ audioSpeech จะต้องเป็นบทพูดสรุปอย่างสุภาพสละสลวยความกว้างไม่เกิน 150 คำ`;
+
+            const userQuery = `โปรดออกแบบแผนพัฒนาจำลองเชิงภูมิสังคม สำหรับพื้นที่ "${location}" ที่มีลักษณะภูมิประเทศเป็น "${terrain}" และเผชิญกับปัญหาสําคัญคือ "${problem}" โดยเสนอทางออกแนวร่วมคิดตามหลักปรัชญาเศรษฐกิจพอเพียงและศาสตร์พระราชา`;
+
+            const apiKey = "";
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                generationConfig: {
+                    responseMimeType: "application/json",
+                    responseSchema: {
+                        type: "OBJECT",
+                        properties: {
+                            planTitle: { type: "STRING", description: "ชื่อโครงการพัฒนาจำลองที่เป็นทางการและสง่างาม" },
+                            analysis: { type: "STRING", description: "วิเคราะห์สภาพพื้นที่เชิงภูมิสังคมและการแก้ไขตามรอยพระยุคลบาท" },
+                            steps: {
+                                type: "ARRAY",
+                                items: {
+                                    type: "OBJECT",
+                                    properties: {
+                                        title: { type: "STRING", description: "หัวข้อขั้นตอนสั้น ๆ เช่น แกล้งดินปรับสภาพเปรี้ยว" },
+                                        detail: { type: "STRING", description: "รายละเอียดแนวทางปฏิบัติที่เข้าใจง่ายเป็นรูปธรรม" }
+                                    },
+                                    required: ["title", "detail"]
+                                },
+                                description: "ขั้นตอนการแก้ไขปัญหา 3 ขั้นตอนเรียงลำดับความต่อเนื่อง"
+                            },
+                            imagePrompt: { type: "STRING", description: "คำอธิบายภาพสไตล์ภาพศิลปะลายเส้นสีน้ำที่สวยงามปราศจากตัวหนังสือภาษาอังกฤษสำหรับป้อน Imagen AI" },
+                            audioSpeech: { type: "STRING", description: "ข้อความสรุปแผนสั้น ๆ ชื่นชมความมุ่งมั่นของชาวบ้าน เพื่อประทับเสียงอ่านภาษาไทย" }
+                        },
+                        required: ["planTitle", "analysis", "steps", "imagePrompt", "audioSpeech"]
+                    }
+                }
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (!response.ok) throw new Error("API plan generating error");
+
+                const result = await response.json();
+                const jsonText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (jsonText) {
+                    const plan = JSON.parse(jsonText);
+                    
+                    // Populate AppState
+                    AppState.currentPlan = plan;
+                    AppState.currentPlan.active = true;
+
+                    // Update UI elements
+                    document.getElementById('planOutputTitle').textContent = plan.planTitle;
+                    document.getElementById('planOutputAnalysis').textContent = plan.analysis;
+
+                    const stepsContainer = document.getElementById('planOutputSteps');
+                    let stepsHtml = '';
+                    plan.steps.forEach((step, idx) => {
+                        stepsHtml += `
+                            <div class="flex items-start gap-2 text-xs font-formal">
+                                <span class="w-5 h-5 flex-shrink-0 flex items-center justify-center bg-royalGoldLight border border-royalGold/30 rounded-full font-bold text-royalGoldDark text-[10px] mt-0.5">${idx + 1}</span>
+                                <div>
+                                    <strong class="text-thaiBlack font-traditional text-sm block">${step.title}</strong>
+                                    <p class="text-neutral-600 text-[11px] leading-relaxed">${step.detail}</p>
+                                </div>
+                            </div>
+                        `;
+                    });
+                    stepsContainer.innerHTML = stepsHtml;
+
+                    // Enable/Reset action buttons
+                    const drawBtn = document.getElementById('planDrawBtn');
+                    const speakBtn = document.getElementById('planSpeakBtn');
+                    drawBtn.innerHTML = `<i class="fa-solid fa-image text-royalGold"></i> สั่ง AI วาดแผนภาพ`;
+                    drawBtn.disabled = false;
+                    speakBtn.innerHTML = `<i class="fa-solid fa-volume-high text-royalGold"></i> 🔊 ฟังเสียงสรุปแผน`;
+                    speakBtn.disabled = false;
+
+                    addStars(50); // Reward for using planning feature
+
+                    loader.classList.add('hidden');
+                    outputBox.classList.remove('hidden');
+                    document.getElementById('appMain').scrollTop = loader.offsetTop - 50;
+                }
+            } catch (e) {
+                console.error("Failed to generate plan via Gemini API", e);
+                loader.classList.add('hidden');
+                const errorBox = document.createElement('div');
+                errorBox.className = "bg-red-50 text-red-700 text-xs p-3 rounded-xl border border-red-300 font-formal text-center";
+                errorBox.textContent = "การรังสรรค์แผนงานสะดุดล้มเนื่องจากสัญญาณอินเทอร์เน็ตไม่เอื้ออำนวย กรุณาลองใหม่อีกครั้งครับ";
+                document.getElementById('aiTutorPlanPanel').prepend(errorBox);
+                setTimeout(() => errorBox.remove(), 4000);
+            }
+        }
+
+        async function triggerPlanDrawing() {
+            if (!AppState.currentPlan.active || !AppState.currentPlan.imagePrompt) return;
+
+            // Switch to the draw tab automatically
+            switchTutorSubTab('draw');
+
+            // Fill input with the AI-suggested prompt
+            const promptInput = document.getElementById('aiDrawPromptInput');
+            promptInput.value = AppState.currentPlan.imagePrompt;
+
+            // Trigger drawing directly
+            generateIllustration();
+        }
+
+        async function triggerPlanSpeaking() {
+            if (!AppState.currentPlan.active || !AppState.currentPlan.audioSpeech) return;
+
+            const speakBtn = document.getElementById('planSpeakBtn');
+            speakText(speakBtn, AppState.currentPlan.audioSpeech);
+        }
+
+        const badgesConfig = [
+            { id: "firstRead", title: "ผู้นอบน้อมเรียนรู้", icon: "fa-book-open", desc: "อ่านบทเรียนแรกสำเร็จเพื่อเริ่มเส้นทางปราชญ์" },
+            { id: "gameBeaten", title: "ผู้ทรงวิสัยทัศน์", icon: "fa-bell", desc: "สั่นกระดิ่งทูลเกล้าและแก้ไขปัญหาฎีการาษฎรถูกต้องสำเร็จ" },
+            { id: "quizPassed", title: "ผู้ผ่านการทดสอบ", icon: "fa-certificate", desc: "ผ่านแบบทดสอบอัจฉริยะ 20 ข้อด้วยคะแนน 15+" },
+            { id: "perfectScore", title: "ราชบัณฑิตผู้ทรงเกียรติ", icon: "fa-crown", desc: "พิชิตแบบทดสอบอัจฉริยะ 20 ข้อเต็มอย่างไร้ที่ติ" }
+        ];
+
+        function renderBadgesView() {
+            const container = document.getElementById('badgesContainer');
+            let html = '';
+
+            badgesConfig.forEach(badge => {
+                const unlocked = AppState.progress.badges[badge.id];
+                if (unlocked) {
+                    html += `
+                        <div class="bg-[#FDFBF7] border border-royalGold p-4 rounded-2xl text-center space-y-2 shadow-sm relative overflow-hidden group">
+                            <div class="absolute -right-4 -bottom-4 text-royalGold/10 text-6xl pointer-events-none group-hover:scale-125 transition-transform duration-500">
+                                <i class="fa-solid ${badge.icon}"></i>
+                            </div>
+                            <div class="w-12 h-12 mx-auto bg-white border border-royalGold rounded-full flex items-center justify-center text-royalGoldDark text-xl shadow-inner">
+                                <i class="fa-solid ${badge.icon}"></i>
+                            </div>
+                            <h4 class="font-bold font-traditional text-sm leading-tight text-thaiBlack">${badge.title}</h4>
+                            <p class="text-[10px] text-neutral-600 font-formal leading-snug">${badge.desc}</p>
+                            <span class="inline-block text-[9px] bg-royalGoldLight border border-royalGold text-royalGoldDark font-bold font-traditional px-2 py-0.5 rounded-full uppercase tracking-wider">สำเร็จแล้ว</span>
+                        </div>
+                    `;
+                } else {
+                    html += `
+                        <div class="bg-white p-4 rounded-2xl text-center space-y-2 border border-dashed border-neutral-300 opacity-60 shadow-sm">
+                            <div class="w-12 h-12 mx-auto bg-neutral-100 rounded-full flex items-center justify-center text-neutral-400 text-xl">
+                                <i class="fa-solid fa-lock"></i>
+                            </div>
+                            <h4 class="font-bold font-traditional text-sm leading-tight text-neutral-400">${badge.title}</h4>
+                            <p class="text-[10px] text-neutral-400 font-formal leading-snug">${badge.desc}</p>
+                            <span class="inline-block text-[9px] bg-neutral-100 text-neutral-400 font-bold font-traditional px-2 py-0.5 rounded-full uppercase tracking-wider">ยังไม่ปลดล็อก</span>
+                        </div>
+                    `;
+                }
+            });
+
+            container.innerHTML = html;
+        }
+
+        function renderGalleryView() {
+            const container = document.getElementById('savedImagesContainer');
+            if (AppState.savedImages.length === 0) {
+                container.innerHTML = `
+                    <div class="col-span-2 text-center py-12 text-neutral-400 space-y-2 select-none">
+                        <i class="fa-solid fa-folder-open text-4xl block text-royalGold"></i>
+                        <p class="text-xs font-traditional">ยังไม่มีภาพวาดสะสม ย้ายไปแท็บ AI ติวเตอร์ เพื่อสร้างและส่งภาพวาดโครงการหลวงเข้ามาที่นี่ได้เลยครับ</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            AppState.savedImages.forEach((imgUrl, idx) => {
+                html += `
+                    <div class="bg-white border border-royalGold/30 rounded-2xl overflow-hidden p-2 flex flex-col space-y-1.5 shadow-sm relative group">
+                        <img src="${imgUrl}" alt="Saved Art" class="w-full h-24 object-cover rounded-xl border border-royalGold shadow-inner">
+                        <div class="flex justify-between items-center px-1">
+                            <span class="text-[10px] font-bold font-traditional text-neutral-500">ชิ้นที่ ${idx + 1}</span>
+                            <button onclick="deleteImage(${idx})" class="text-xs text-neutral-400 hover:text-red-500 transition-colors">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+
+        function deleteImage(index) {
+            AppState.savedImages.splice(index, 1);
+            saveProgress();
+            renderGalleryView();
+        }
+
+    </script>
+</body>
+</html>
